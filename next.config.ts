@@ -1,7 +1,24 @@
-import type { NextConfig } from "next";
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'lh3.googleusercontent.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'avatar.vercel.sh',
+      },
+    ],
+  },
 
-const nextConfig: NextConfig = {
-  /* config options here */
+  turbopack: {
+    root: "C:/Users/Sachi/Desktop/New folder/my-web-app",
+  },
+
 };
 
-export default nextConfig;
+module.exports = nextConfig;
+
+
