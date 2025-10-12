@@ -193,6 +193,25 @@ export default function Home() {
   </div>
 </section>
 
+{/* Onboarding Form CTA Section */}
+<section className="px-10 md:px-20 py-20 bg-orange-50 text-center rounded-3xl my-16">
+  <h3 className="text-3xl md:text-4xl font-extrabold mb-6 text-gray-900">
+    Get Started With Your Onboarding
+  </h3>
+  <p className="text-gray-700 max-w-2xl mx-auto mb-8">
+    Fill out the form below and our team will set up your automated outreach system in no time.
+  </p>
+
+  <a
+    href="https://forms.gle/hu4KysNp5pj7eKD36"
+    target="_blank"
+    className="inline-block bg-orange-500 text-white font-semibold px-8 py-4 rounded-lg hover:bg-orange-600 transition-all shadow-md"
+  >
+    Go to Onboarding Form →
+  </a>
+</section>
+
+
       {/* Footer */}
       <footer className="text-center py-10 text-gray-400 text-sm border-t border-gray-100">
         © {new Date().getFullYear()} Wallnut Outreach — All rights reserved.
