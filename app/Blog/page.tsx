@@ -33,7 +33,6 @@ export default function Blog() {
 
         <nav className="flex items-center space-x-8 text-sm md:text-base font-medium">
           <Link href="/" className="hover:text-orange-500 transition-colors">Home</Link>
-          <Link href="/blog" className="hover:text-orange-500 transition-colors font-semibold">Blog</Link>
           <Link href="https://calendar.app.google/utoRhRPhPQFRAqKd8" className="bg-orange-500 text-white px-5 py-2 rounded-lg hover:bg-orange-600 transition-all shadow-sm">
             Book a Call
           </Link>
