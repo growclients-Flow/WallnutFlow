@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image"
-import Blog from "./blog";
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 font-sans text-black">
