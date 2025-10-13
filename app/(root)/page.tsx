@@ -12,7 +12,7 @@ export default function Home() {
         <nav className="flex items-center space-x-8 text-sm md:text-base font-medium">
           <Link href="#services" className="hover:text-orange-500 transition-colors">About</Link>
           <Link href="#process" className="hover:text-orange-500 transition-colors">How We Works</Link>
-          <Link href="/blog" className="hover:text-orange-500 transition-colors">Blog</Link>
+          <Link href="/Blog" className="hover:text-orange-500 transition-colors">Blog</Link>
           <Link
             href="https://calendar.app.google/utoRhRPhPQFRAqKd8"
             className="bg-orange-500 text-white px-5 py-2 rounded-lg hover:bg-orange-600 transition-all shadow-sm"
