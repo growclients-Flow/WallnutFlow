@@ -10,7 +10,7 @@ const blogPosts = [
     author: "Sachi",
     date: "Oct 13, 2025",
     readingTime: "5 min read",
-    category: "Outreach",
+    category: "Case studies",
   },
   {
     title: "Case Study: 15 Qualified Calls in 30 Days",
@@ -20,7 +20,7 @@ const blogPosts = [
     author: "Sachi",
     date: "Oct 10, 2025",
     readingTime: "6 min read",
-    category: "Case Study",
+    category: "Case Studies",
   },
   {
     title: "Why Email + LinkedIn Outreach is a Game-Changer",
@@ -30,7 +30,7 @@ const blogPosts = [
     author: "Sachi",
     date: "Oct 8, 2025",
     readingTime: "7 min read",
-    category: "Strategy",
+    category: "Case Studies",
   },
 ];
 
@@ -65,6 +65,9 @@ export default function Blog() {
 
       {/* Blog Grid */}
       <section className="px-10 md:px-20 py-24 grid md:grid-cols-3 gap-12">
+        <h1 className="text-xl md:text-3xl font-extrabold tracking-tight">
+          Wallnut<span className="text-orange-500">.</span>
+        </h1>
         {blogPosts.map((post, idx) => (
           <div key={idx} className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-shadow duration-300">
             <div className="relative h-64 w-full group overflow-hidden">
