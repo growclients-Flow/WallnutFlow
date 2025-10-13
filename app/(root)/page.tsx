@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image"
+import Blog from "../Blog/blog";
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 font-sans text-black">
@@ -11,8 +12,8 @@ export default function Home() {
 
         <nav className="flex items-center space-x-8 text-sm md:text-base font-medium">
           <Link href="#services" className="hover:text-orange-500 transition-colors">About</Link>
-          <Link href="#process" className="hover:text-orange-500 transition-colors">How It Works</Link>
-          <Link href="#pricing" className="hover:text-orange-500 transition-colors">Pricing</Link>
+          <Link href="#process" className="hover:text-orange-500 transition-colors">How We Works</Link>
+          <Link href="/blog" className="hover:text-orange-500 transition-colors">Blog</Link>
           <Link
             href="https://calendar.app.google/utoRhRPhPQFRAqKd8"
             className="bg-orange-500 text-white px-5 py-2 rounded-lg hover:bg-orange-600 transition-all shadow-sm"
