@@ -99,6 +99,55 @@ export default function Home() {
         </div>
       </section>
 
+{/* How It Works */}
+      <section id="process" className="px-10 md:px-20 py-20 bg-gray-50 text-center">
+        <h3 className="text-4xl font-bold mb-6">How It Works</h3>
+        <p className="text-gray-600 max-w-2xl mx-auto mb-12">
+          Our system is simple but powerful — designed for agencies that want clients on autopilot.
+        </p>
+
+        <div className="grid md:grid-cols-4 gap-8 text-left">
+          <div className="p-6 bg-white rounded-2xl shadow-sm border">
+            <h4 className="font-bold text-orange-500 mb-2">Step 1</h4>
+            <p className="text-gray-600">We onboard you, understand your offer, and define your perfect client persona.</p>
+          </div>
+          <div className="p-6 bg-white rounded-2xl shadow-sm border">
+            <h4 className="font-bold text-orange-500 mb-2">Step 2</h4>
+            <p className="text-gray-600">We build your LinkedIn + email system — everything runs hands-free for you.</p>
+          </div>
+          <div className="p-6 bg-white rounded-2xl shadow-sm border">
+            <h4 className="font-bold text-orange-500 mb-2">Step 3</h4>
+            <p className="text-gray-600">Leads start flowing in 7–14 days. You’ll see booked calls directly on your calendar.</p>
+          </div>
+          <div className="p-6 bg-white rounded-2xl shadow-sm border">
+            <h4 className="font-bold text-orange-500 mb-2">Step 4</h4>
+            <p className="text-gray-600">We continuously optimize the campaigns for better reply rates and conversions.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Early Access / Social Proof Alternative */}
+      <section className="px-10 md:px-20 py-20 text-center">
+        <h3 className="text-4xl font-bold mb-6">Be One of the First Agencies to Use It</h3>
+        <p className="text-gray-600 max-w-2xl mx-auto mb-12">
+          This system is based on frameworks used by top 6-figure agencies — now being opened for a few early clients at a
+          special <strong>Founder’s Rate</strong>. Limited spots to ensure results.
+        </p>
+
+        <div className="bg-white p-10 rounded-3xl shadow-lg border border-gray-100 max-w-2xl mx-auto">
+          <h4 className="text-xl font-semibold mb-4 text-orange-500">🔥 Founder’s Offer</h4>
+          <p className="text-gray-700 mb-6">
+            We’re currently onboarding our first 10 agencies at a discounted rate — to build success stories and long-term partnerships.
+          </p>
+          <Link
+            href="https://calendar.app.google/utoRhRPhPQFRAqKd8"
+            className="bg-orange-500 text-white px-10 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-all shadow-md"
+          >
+            Claim Your Spot →
+          </Link>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section
         id="call"
