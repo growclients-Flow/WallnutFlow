@@ -5,6 +5,8 @@ export default function Home() {
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 font-sans text-black">
       {/* Navbar */}
       <header className="flex justify-between items-center px-10 md:px-20 py-6 border-b border-gray-200 bg-white/80 backdrop-blur-sm sticky top-0 z-50">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9087396282597110"
+     crossorigin="anonymous"></script>
         <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight">
           Wallnut<span className="text-orange-500">.</span>
         </h1>
