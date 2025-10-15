@@ -40,7 +40,7 @@ export default function Blog() {
       {/* Navbar */}
       <header className="flex justify-between items-center px-10 md:px-20 py-6 border-b border-gray-200 bg-white/80 backdrop-blur-sm sticky top-0 z-50">
         <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight">
-          Wallnut<span className="text-orange-500">.</span>
+          WallnutFlow<span className="text-orange-500">.</span>
         </h1>
 
         <nav className="flex items-center space-x-8 text-sm md:text-base font-medium">
@@ -65,9 +65,6 @@ export default function Blog() {
 
       {/* Blog Grid */}
       <section className="px-10 md:px-20 py-24 grid md:grid-cols-3 gap-12">
-        <h1 className="text-xl md:text-3xl font-extrabold tracking-tight">
-          Wallnut<span className="text-orange-500">.</span>
-        </h1>
         {blogPosts.map((post, idx) => (
           <div key={idx} className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-shadow duration-300">
             <div className="relative h-64 w-full group overflow-hidden">

@@ -16,7 +16,7 @@ export default function Home() {
       {/* Navbar */}
       <header className="flex justify-between items-center px-10 md:px-20 py-6 border-b border-gray-200 bg-white/80 backdrop-blur-sm sticky top-0 z-50">
         <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight">
-          Wallnut<span className="text-orange-500">.</span>
+          WallnutFlow<span className="text-orange-500">.</span>
         </h1>
 
         <nav className="flex items-center space-x-8 text-sm md:text-base font-medium">
