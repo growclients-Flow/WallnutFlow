@@ -1,219 +1,141 @@
-import Link from "next/link";
+
 import Image from "next/image";
-import Script from "next/script"; // ✅ Add this import
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 font-sans text-black">
-
-      {/* Google AdSense Script ✅ */}
-      <Script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9087396282597110"
-        crossOrigin="anonymous"
-      />
-
+    <main className="font-sans text-gray-800 bg-white">
       {/* Navbar */}
-      <header className="flex justify-between items-center px-10 md:px-20 py-6 border-b border-gray-200 bg-white/80 backdrop-blur-sm sticky top-0 z-50">
-        <h1 className="text-2xl md:text-3xl font-extrabold tracking-tight">
-          WallnutFlow<span className="text-orange-500">.</span>
-        </h1>
-
-        <nav className="flex items-center space-x-8 text-sm md:text-base font-medium">
-          <Link href="#services" className="hover:text-orange-500 transition-colors">
-            About
-          </Link>
-          <Link href="#process" className="hover:text-orange-500 transition-colors">
-            How We Works
-          </Link>
-          <Link href="/Blog" className="hover:text-orange-500 transition-colors">
-            Blog
-          </Link>
-          <Link
-            href="https://calendar.app.google/utoRhRPhPQFRAqKd8"
-            className="bg-orange-500 text-white px-5 py-2 rounded-lg hover:bg-orange-600 transition-all shadow-sm"
-          >
-            Book a Call
-          </Link>
-        </nav>
-      </header>
+      <nav className="flex justify-between items-center px-6 md:px-16 py-5 text-sm font-medium">
+        <div className="text-xl font-extrabold text-[#FF4B2B]">WallnutFlow.</div>
+        <div className="space-x-6 hidden md:flex">
+          <a href="#" className="hover:text-[#FF4B2B] transition">Home</a>
+          <a href="#" className="hover:text-[#FF4B2B] transition">Work</a>
+          <a href="#" className="hover:text-[#FF4B2B] transition">Process</a>
+          <a href="#" className="hover:text-[#FF4B2B] transition">Contact</a>
+        </div>
+        <button className="bg-[#FF4B2B] hover:bg-[#ff694f] text-white px-5 py-2 rounded-full transition-all duration-300">
+          Book a Free Call
+        </button>
+      </nav>
 
       {/* Hero Section */}
-      <main className="px-10 md:px-20 py-24 grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
-        <div className="space-y-8">
-          <h2 className="text-5xl md:text-6xl font-extrabold leading-tight tracking-tight">
-            Book <span className="text-orange-500">10–20 Qualified</span> Sales Calls Every Month.
-          </h2>
-          <p className="text-gray-600 text-lg max-w-lg leading-relaxed">
-            We help <strong>Digital Marketing Agencies</strong> fill their calendars with ready-to-buy clients using a proven
-            & fully automated <span className="text-orange-500 font-semibold">Email + LinkedIn Outreach System</span>.
-          </p>
-          <Link
-            href="https://calendar.app.google/utoRhRPhPQFRAqKd8"
-            className="inline-block bg-orange-500 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-orange-600 transition-all shadow-md hover:shadow-lg"
-          >
-            Book a Call
-          </Link>
-        </div>
+      <section className="text-center mt-12 md:mt-24">
+        <h1 className="text-2xl md:text-4xl font-bold leading-snug">
+          Get <span className="text-[#FF4B2B]">Qualified</span> 15+ sales calls per month<br />
+          without lifting your finger
+        </h1>
 
-        {/* Video Preview */}
-        <div className="relative w-full h-80 md:h-96 flex items-center justify-center">
-          <div className="absolute inset-0 bg-gradient-to-tr from-orange-200 via-white to-gray-100 rounded-3xl blur-3xl opacity-70"></div>
-          <div className="relative z-10 w-full h-full bg-white border border-gray-200 rounded-2xl shadow-xl overflow-hidden">
-            <video className="w-full h-full object-cover rounded-2xl" controls>
-              <source src="/preview.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </div>
-      </main>
+        <button className="mt-6 bg-[#FF4B2B] text-white px-8 py-3 rounded-full hover:scale-105 transition-transform">
+          Book a Free Call
+        </button>
 
-      {/* About Section */}
-      <section id="services" className="px-10 md:px-20 py-20 text-center">
-        <h3 className="text-4xl font-bold mb-6">What We Do</h3>
-        <p className="text-gray-600 max-w-3xl mx-auto mb-12">
-          We build <strong>automated client acquisition systems</strong> for digital marketing agencies — combining
-          <span className="text-orange-500 font-semibold"> LinkedIn outreach + Email campaigns </span>
-          to generate predictable booked calls every month.
-        </p>
-
-        <div className="grid md:grid-cols-3 gap-10">
-          <div className="p-8 bg-white rounded-2xl shadow-md border border-gray-100">
-            <h4 className="text-xl font-semibold mb-3 text-orange-500">1️⃣ Research & Targeting</h4>
-            <p className="text-gray-600">
-              We identify decision-makers in your exact niche with purchasing power and intent.
-            </p>
-          </div>
-          <div className="p-8 bg-white rounded-2xl shadow-md border border-gray-100">
-            <h4 className="text-xl font-semibold mb-3 text-orange-500">2️⃣ Personalized Outreach</h4>
-            <p className="text-gray-600">
-              AI-powered messages crafted for natural responses, not spam — so you stand out.
-            </p>
-          </div>
-          <div className="p-8 bg-white rounded-2xl shadow-md border border-gray-100">
-            <h4 className="text-xl font-semibold mb-3 text-orange-500">3️⃣ Automation & Reporting</h4>
-            <p className="text-gray-600">
-              We handle the tech setup, sequences, and performance tracking — all done-for-you.
-            </p>
-          </div>
-        </div>
-      </section>
-
-{/* How It Works */}
-      <section id="process" className="px-10 md:px-20 py-20 bg-gray-50 text-center">
-        <h3 className="text-4xl font-bold mb-6">How It Works</h3>
-        <p className="text-gray-600 max-w-2xl mx-auto mb-12">
-          Our system is simple but powerful — designed for agencies that want clients on autopilot.
-        </p>
-
-        <div className="grid md:grid-cols-4 gap-8 text-left">
-          <div className="p-6 bg-white rounded-2xl shadow-sm border">
-            <h4 className="font-bold text-orange-500 mb-2">Step 1</h4>
-            <p className="text-gray-600">We onboard you, understand your offer, and define your perfect client persona.</p>
-          </div>
-          <div className="p-6 bg-white rounded-2xl shadow-sm border">
-            <h4 className="font-bold text-orange-500 mb-2">Step 2</h4>
-            <p className="text-gray-600">We build your LinkedIn + email system — everything runs hands-free for you.</p>
-          </div>
-          <div className="p-6 bg-white rounded-2xl shadow-sm border">
-            <h4 className="font-bold text-orange-500 mb-2">Step 3</h4>
-            <p className="text-gray-600">Leads start flowing in 7–14 days. You’ll see booked calls directly on your calendar.</p>
-          </div>
-          <div className="p-6 bg-white rounded-2xl shadow-sm border">
-            <h4 className="font-bold text-orange-500 mb-2">Step 4</h4>
-            <p className="text-gray-600">We continuously optimize the campaigns for better reply rates and conversions.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Early Access / Social Proof Alternative */}
-      <section className="px-10 md:px-20 py-20 text-center">
-        <h3 className="text-4xl font-bold mb-6">Be One of the First Agencies to Use It</h3>
-        <p className="text-gray-600 max-w-2xl mx-auto mb-12">
-          This system is based on frameworks used by top 6-figure agencies — now being opened for a few early clients at a
-          special <strong>Founder’s Rate</strong>. Limited spots to ensure results.
-        </p>
-
-        <div className="bg-white p-10 rounded-3xl shadow-lg border border-gray-100 max-w-2xl mx-auto">
-          <h4 className="text-xl font-semibold mb-4 text-orange-500">🔥 Founder’s Offer</h4>
-          <p className="text-gray-700 mb-6">
-            We’re currently onboarding our first 10 agencies at a discounted rate — to build success stories and long-term partnerships.
-          </p>
-          <Link
-            href="https://calendar.app.google/utoRhRPhPQFRAqKd8"
-            className="bg-orange-500 text-white px-10 py-3 rounded-lg font-semibold hover:bg-orange-600 transition-all shadow-md"
-          >
-            Claim Your Spot →
-          </Link>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section
-        id="call"
-        className="relative px-6 md:px-20 py-16 bg-white border-4 border-orange-500 rounded-3xl max-w-6xl mx-auto my-20 shadow-lg"
-      >
-        <div className="grid md:grid-cols-2 gap-10 items-center">
-          <div className="space-y-5">
-            <h2 className="text-3xl md:text-4xl font-extrabold leading-tight text-gray-900">
-              Ready to Fill Your Calendar with{" "}
-              <span className="text-orange-500">Qualified</span> Sales Calls?
-            </h2>
-            <p className="text-gray-600 text-base md:text-lg max-w-md">
-              Stop wasting time guessing how to get leads. In just 7 days, we’ll set up
-              your automated outreach system that keeps delivering month after month.
-            </p>
-
-            <a
-              href="https://calendar.app.google/utoRhRPhPQFRAqKd8"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-orange-500 text-white font-semibold text-base md:text-lg px-6 py-3 rounded-lg hover:bg-orange-600 transition-all shadow-md"
-            >
-              Book a Strategy Call
-            </a>
-          </div>
-
-          <div className="bg-gray-200 rounded-xl h-52 md:h-60 flex items-center justify-center overflow-hidden">
+        <div className="mt-16 flex justify-center">
+          <div className="relative w-[320px] h-[220px] md:w-[480px] md:h-[300px]">
             <Image
-              src="/preview.jpg"
-              alt="Service preview"
-              width={600}
-              height={400}
-              className="object-cover w-full h-full rounded-xl"
+              src="/placeholder.svg"
+              alt="Illustration"
+              fill
+              className="object-contain animate-fade-in"
             />
           </div>
         </div>
       </section>
 
-      {/* Onboarding Form */}
-      <section className="px-10 md:px-20 py-20 bg-orange-50 text-center rounded-3xl my-16">
-        <h3 className="text-3xl md:text-4xl font-extrabold mb-6 text-gray-900">
-          Get Started With Your Onboarding
-        </h3>
-        <p className="text-gray-700 max-w-2xl mx-auto mb-8">
-          Fill out the form below and our team will set up your automated outreach system in no time.
-        </p>
-
-        <a
-          href="https://forms.gle/hu4KysNp5pj7eKD36"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-orange-500 text-white font-semibold px-8 py-4 rounded-lg hover:bg-orange-600 transition-all shadow-md"
-        >
-          Go to Onboarding Form →
-        </a>
+      {/* What we serve */}
+      <section className="text-center mt-28 px-4">
+        <h2 className="text-2xl font-bold">
+          What we <span className="text-[#FF4B2B]">serves</span> you
+        </h2>
+        <div className="mt-10 grid md:grid-cols-2 gap-10 justify-center items-center">
+          <div className="bg-white shadow-xl rounded-xl p-6 hover:-translate-y-1 transition-transform">
+            <Image src="/placeholder.svg" alt="Service 1" width={300} height={200} className="mx-auto" />
+          </div>
+          <div className="bg-white shadow-xl rounded-xl p-6 hover:-translate-y-1 transition-transform">
+            <Image src="/placeholder.svg" alt="Service 2" width={300} height={200} className="mx-auto" />
+          </div>
+        </div>
       </section>
 
-      {/* Footer */}
-      <footer className="text-center py-10 text-gray-400 text-sm border-t border-gray-100">
-        © {new Date().getFullYear()} Wallnut Outreach — All rights reserved.
-      </footer>
-    </div>
+      {/* How we work */}
+      <section className="mt-28 px-4 text-center">
+        <h2 className="text-2xl font-bold">
+          How we <span className="text-[#FF4B2B]">works</span>
+        </h2>
+
+        <div className="mt-10 flex flex-col md:flex-row items-center justify-center gap-10">
+          <Image src="/placeholder.svg" alt="Work illustration" width={400} height={300} className="rounded-lg" />
+
+          <div className="space-y-6 text-left">
+            {[1, 2, 3].map((step) => (
+              <div key={step} className="flex items-center space-x-4">
+                <span className="bg-[#7C3AED] text-white w-8 h-8 flex items-center justify-center rounded-lg font-bold">
+                  {step}
+                </span>
+                <p className="text-lg font-medium">Step {step} description goes here.</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Process */}
+      <section className="mt-28 px-6 md:px-16 text-center">
+        <h2 className="text-2xl font-bold">
+          Our <span className="text-[#FF4B2B]">Process</span>
+        </h2>
+
+        <div className="mt-10 grid md:grid-cols-4 gap-8">
+          {[1, 2, 3, 4].map((i) => (
+            <div key={i} className="p-6 shadow-md rounded-lg hover:shadow-lg transition-all duration-300">
+              <Image src="/placeholder.svg" alt={`Process ${i}`} width={80} height={80} className="mx-auto mb-4" />
+              <p className="font-medium">Process step {i}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Founder Section */}
+      <section className="mt-28 text-center px-6 md:px-16">
+        <h3 className="text-sm text-gray-400 tracking-wide mb-6">OUR FOUNDER</h3>
+
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8">
+          <Image
+            src="/founder.jpg"
+            alt="Founder"
+            width={200}
+            height={200}
+            className="rounded-lg shadow-lg"
+          />
+          <div className="text-left md:w-1/2">
+            <p className="font-bold text-lg mb-2">@founder_handle</p>
+            <p className="text-gray-600">
+              I'm the Founder of WallnutFlow, a digital marketing agency. We help you get
+              qualified sales calls while you focus on scaling your business.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Tools Section */}
+      <section className="mt-28 text-center px-6 md:px-16 pb-24">
+        <p className="text-gray-700">
+          We build our systems using industry-standard tools<br />
+          trusted by <span className="font-bold text-[#FF4B2B]">10,000+ agencies</span> worldwide.
+        </p>
+
+        <div className="mt-8 flex flex-wrap justify-center gap-6">
+          {["apollo.io", "instantly.ai", "google-workspace", "chatGPT", "google-meet", "payoneer"].map((tool, idx) => (
+            <div
+              key={idx}
+              className="px-4 py-2 border rounded-full shadow-sm text-gray-600 hover:text-[#FF4B2B] transition-colors"
+            >
+              {tool}
+            </div>
+          ))}
+        </div>
+      </section>
+    </main>
   );
 }
 
-
-
-
-
+     
