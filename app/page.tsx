@@ -109,7 +109,7 @@ export default function Home() {
           <div className="text-left md:w-1/2">
             <p className="font-bold text-lg mb-2">@founder_handle</p>
             <p className="text-gray-600">
-              I'm the Founder of WallnutFlow, a digital marketing agency. We help you get
+              Im the Founder of WallnutFlow, a digital marketing agency. We help you get
               qualified sales calls while you focus on scaling your business.
             </p>
           </div>
