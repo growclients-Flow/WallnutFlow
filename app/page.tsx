@@ -128,7 +128,7 @@ export default function Home() {
       <motion.div
         animate={{ scale: [1, 1.2, 1] }}
         transition={{ repeat: Infinity, duration: 2 }}
-        className="bg-white text-[#7C3AED] font-extrabold text-3xl md:text-4xl shadow-md px-4 py-2 rounded-full"
+        className="text-[#7C3AED] font-extrabold text-3xl md:text-4xl shadow-md px-4 py-2 rounded-full"
       >
         W.
       </motion.div>
@@ -136,7 +136,91 @@ export default function Home() {
   </div>
 </section>
 
-    </main>
+{/* How We Work Section */}
+<section
+  id="how"
+  className="flex flex-col md:flex-row items-center justify-center mt-32 mb-24 px-6 md:px-16"
+>
+  {/* Left Illustration */}
+  <motion.div
+    initial={{ opacity: 0, x: -20 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.6 }}
+    className="md:w-1/2 flex justify-center"
+  >
+    <Image
+      src="/placeholder-illustration.png"
+      alt="How we work illustration"
+      width={420}
+      height={320}
+      className="rounded-lg shadow-lg object-contain"
+    />
+  </motion.div>
+
+  {/* Right Steps */}
+  <div className="relative md:w-1/2 flex flex-col justify-center mt-12 md:mt-0 pl-0 md:pl-16">
+    {/* Heading */}
+    <h2 className="text-center md:text-left text-2xl md:text-3xl font-extrabold mb-10">
+      How we <span className="text-[#FF4B2B]">work</span>
+    </h2>
+
+    {/* Step 1 */}
+    <motion.div
+      whileHover={{ scale: 1.02 }}
+      className="flex items-center gap-6 mb-10"
+    >
+      <div className="relative flex flex-col items-center">
+        <div className="w-10 h-10 flex items-center justify-center bg-[#7C3AED] text-white font-bold rounded-lg text-lg shadow-md">
+          1
+        </div>
+        <div className="h-[80px] w-[2px] bg-dotted border-l-2 border-dotted border-gray-300 absolute top-10"></div>
+      </div>
+      <div className="bg-white shadow-lg rounded-xl px-5 py-4 flex-1">
+        <p className="font-semibold text-gray-800">ICP Research</p>
+        <p className="text-gray-500 text-sm mt-1">
+          We identify and map your ideal customer profile with verified data.
+        </p>
+      </div>
+    </motion.div>
+
+    {/* Step 2 */}
+    <motion.div
+      whileHover={{ scale: 1.02 }}
+      className="flex items-center gap-6 mb-10"
+    >
+      <div className="relative flex flex-col items-center">
+        <div className="w-10 h-10 flex items-center justify-center bg-[#7C3AED] text-white font-bold rounded-lg text-lg shadow-md">
+          2
+        </div>
+        <div className="h-[80px] w-[2px] bg-dotted border-l-2 border-dotted border-gray-300 absolute top-10"></div>
+      </div>
+      <div className="bg-white shadow-lg rounded-xl px-5 py-4 flex-1">
+        <p className="font-semibold text-gray-800">Automation Setup</p>
+        <p className="text-gray-500 text-sm mt-1">
+          We build cold email systems, domains, and inboxes for predictable outreach.
+        </p>
+      </div>
+    </motion.div>
+
+    {/* Step 3 */}
+    <motion.div whileHover={{ scale: 1.02 }} className="flex items-center gap-6">
+      <div className="flex flex-col items-center">
+        <div className="w-10 h-10 flex items-center justify-center bg-[#7C3AED] text-white font-bold rounded-lg text-lg shadow-md">
+          3
+        </div>
+      </div>
+      <div className="bg-white shadow-lg rounded-xl px-5 py-4 flex-1">
+        <p className="font-semibold text-gray-800">Optimize & Scale</p>
+        <p className="text-gray-500 text-sm mt-1">
+          We optimize sequences, analyze metrics, and scale calls month after month.
+        </p>
+      </div>
+    </motion.div>
+  </div>
+</section>
+
+
+</main>
   );
 }
 
