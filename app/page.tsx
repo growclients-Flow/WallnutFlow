@@ -128,7 +128,7 @@ export default function Home() {
       <motion.div
         animate={{ scale: [1, 1.2, 1] }}
         transition={{ repeat: Infinity, duration: 2 }}
-        className="text-[#7C3AED] font-extrabold text-3xl md:text-4xl shadow-md px-4 py-2 rounded-full"
+        className="bg-white text-[#7C3AED] font-extrabold text-3xl md:text-4xl shadow-md px-4 py-2 rounded-full"
       >
         W.
       </motion.div>
@@ -149,7 +149,7 @@ export default function Home() {
     className="md:w-1/2 flex justify-center"
   >
     <Image
-      src="/placeholder-illustration.png"
+      src="/previem.jpg"
       alt="How we work illustration"
       width={420}
       height={320}
@@ -219,6 +219,136 @@ export default function Home() {
   </div>
 </section>
 
+{/* Our Process Section */}
+<section
+  id="process"
+  className="mt-32 mb-24 px-6 md:px-16 text-center flex flex-col items-center"
+>
+  <h2 className="text-2xl md:text-3xl font-extrabold mb-14">
+    Our <span className="text-[#FF4B2B]">Process</span>
+  </h2>
+
+  <div className="relative flex flex-col md:flex-row justify-center items-center gap-10 md:gap-6 w-full max-w-6xl">
+
+    {/* Process Steps */}
+    {[
+      {
+        icon: "/process-1.png",
+        title: "Discovery",
+      },
+      {
+        icon: "/process-2.png",
+        title: "Setup",
+      },
+      {
+        icon: "/process-3.png",
+        title: "Automation",
+      },
+      {
+        icon: "/process-4.png",
+        title: "Reporting",
+      },
+    ].map((step, index) => (
+      <motion.div
+        key={index}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, delay: index * 0.15 }}
+        className="relative bg-white shadow-xl rounded-2xl p-8 flex flex-col items-center justify-center w-[220px] h-[240px]"
+      >
+        <Image
+          src={step.icon}
+          alt={step.title}
+          width={64}
+          height={64}
+          className="mb-4 object-contain"
+        />
+        <p className="font-semibold text-gray-800">{step.title}</p>
+
+        {/* Dotted line between cards */}
+        {index < 3 && (
+          <div className="hidden md:block absolute top-1/2 right-[-34px] w-[60px] border-t-2 border-dotted border-gray-300"></div>
+        )}
+      </motion.div>
+    ))}
+  </div>
+</section>
+
+{/* OUR FOUNDER SECTION */}
+<section className="mt-28 px-6 md:px-20 text-center">
+  <h3 className="text-xs md:text-sm font-semibold tracking-wider text-[#FF4B2B] mb-10">
+    OUR FOUNDER
+  </h3>
+
+  <div className="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-16">
+    {/* Founder Image */}
+    <div className="relative w-[260px] h-[300px] md:w-[300px] md:h-[360px] flex-shrink-0">
+      {/* Red circle behind image */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute w-[220px] h-[220px] bg-[#FF4B2B] rounded-full -z-10"></div>
+      </div>
+
+      <Image
+        src="/founder.jpg"
+        alt="Founder"
+        fill
+        className="object-cover rounded-md grayscale"
+      />
+    </div>
+
+    {/* Founder Card */}
+    <div className="relative bg-white shadow-xl rounded-xl p-6 md:p-8 w-full md:max-w-lg text-left">
+      <div className="flex items-center gap-4 mb-4">
+        <Image
+          src="/founder.jpg"
+          alt="Profile"
+          width={48}
+          height={48}
+          className="rounded-full"
+        />
+        <div>
+          <p className="font-semibold text-gray-800">Sachin G</p>
+          <p className="text-sm text-gray-500">Founder @ WallnutFlow</p>
+        </div>
+      </div>
+
+      <div className="bg-white rounded-lg shadow-md p-4">
+        <p className="text-sm text-gray-700 leading-relaxed">
+          “I’m the Founder of WallnutFlow. We help Digital Marketing Agencies
+          to get 10–20 Qualified sales calls per month by building a done-for-you
+          Automation system, so it works 24/7 and fills your calendar with
+          qualified calls.”
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{/* TOOLS SECTION */}
+<section className="mt-24 px-6 md:px-20 text-center pb-28">
+  <p className="text-gray-700 text-sm md:text-base">
+    We build our systems using industry-standard tools trusted by{" "}
+    <span className="font-bold text-[#FF4B2B]">10,000+ agencies</span> worldwide.
+  </p>
+
+  <div className="mt-10 flex flex-wrap justify-center gap-6 md:gap-10">
+    {[
+      { name: "Apollo.io", color: "bg-[#FFF9E6]" },
+      { name: "Instantly.ai", color: "bg-[#EEF2FF]" },
+      { name: "Google Workspace", color: "bg-[#FFF7F0]" },
+      { name: "ChatGPT", color: "bg-[#F4F4F4]" },
+      { name: "Google Meet", color: "bg-[#E8F5E9]" },
+      { name: "Payoneer", color: "bg-[#FFF1EC]" },
+    ].map((tool, idx) => (
+      <div
+        key={idx}
+        className={`${tool.color} flex items-center gap-2 border border-gray-200 shadow-sm px-4 py-2 rounded-full text-gray-700 font-medium text-sm hover:shadow-md transition-all`}
+      >
+        {tool.name}
+      </div>
+    ))}
+  </div>
+</section>
 
 </main>
   );
