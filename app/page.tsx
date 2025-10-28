@@ -67,7 +67,7 @@ export default function Home() {
           className="mt-12 relative w-[320px] h-[240px] md:w-[800px] md:h-[520px]"
         >
           <Image
-            src="/hero-placeholder.png"
+            src="/preview image.png"
             alt="automation-diagram"
             fill
             className="object-contain"
