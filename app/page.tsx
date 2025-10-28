@@ -1,506 +1,344 @@
-"use client";
-
+import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-export default function Home() {
-  return (
-    <main className="min-h-screen bg-white font-sans text-gray-800">
-      {/* Navbar */}
-      <nav className="flex items-center justify-between px-8 md:px-16 py-5 text-sm font-medium">
-        <div className="text-xl md:text-2xl font-extrabold text-[#FF4B2B]">WallnutFlow.</div>
+// WallnutFlow — Single-file React component (TailwindCSS)
+// Usage: drop into a Next.js page (pages/index.jsx) or preview in Canvas
 
-        <div className="hidden md:flex items-center gap-6 text-gray-700">
-          <a href="#" className="hover:text-[#FF4B2B] transition">Services</a>
-          <a href="#" className="hover:text-[#FF4B2B] transition">Blog</a>
-          <a href="#" className="hover:text-[#FF4B2B] transition">How it works</a>
-          <a href="#" className="hover:text-[#FF4B2B] transition">Contact</a>
+const CONFIG = {
+  company: "WallnutFlow",
+  founder: "Sachin G",
+  siteUrl: "https://wallnut.info", // <-- replace with your actual URL
+  calendly: "https://calendly.com/your-link", // <-- replace with your Calendly
+  heroSub: "Automated outreach that books 10–20 qualified client calls/month for agencies",
+};
+
+export default function WallnutLanding() {
+  return (
+    <main className="min-h-screen bg-white font-sans text-gray-800 leading-relaxed">
+      {/* NAV */}
+      <nav className="flex items-center justify-between px-6 md:px-16 py-5 max-w-7xl mx-auto">
+        <div className="flex items-center gap-4">
+          <div className="text-xl md:text-2xl font-extrabold text-[#7C3AED] tracking-tight">{CONFIG.company}.</div>
+          <div className="hidden md:block text-sm text-gray-500">Done-for-you outreach & appointment systems</div>
         </div>
 
-        <a
-          href="#book"
-          className="ml-4 inline-block bg-[#FF4B2B] text-white px-5 py-2 rounded-full text-sm font-semibold shadow-md hover:scale-105 transition-all"
-        >
-          Book a free call
-        </a>
+        <div className="hidden md:flex items-center gap-6 text-gray-700">
+          <a href="#services" className="hover:text-[#7C3AED] transition">Services</a>
+          <a href="#how" className="hover:text-[#7C3AED] transition">How it works</a>
+          <a href="#process" className="hover:text-[#7C3AED] transition">Process</a>
+          <a href="#offer" className="hover:text-[#7C3AED] transition">Offer</a>
+          <a href="#contact" className="hover:text-[#7C3AED] transition">Contact</a>
+        </div>
+
+        <div className="flex items-center gap-3">
+          <a href={CONFIG.siteUrl} className="hidden md:inline-block text-sm text-gray-600">{CONFIG.siteUrl}</a>
+          <a
+            href={CONFIG.calendly}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-block bg-gradient-to-r from-[#7C3AED] to-[#FF4B2B] text-white px-4 py-2 rounded-full text-sm font-semibold shadow-md hover:scale-105 transition-all"
+          >
+            Book a call
+          </a>
+        </div>
       </nav>
 
-      {/* Hero Section */}
-      <header className="flex flex-col items-center text-center px-6 mt-12 md:mt-20">
-        {/* Small Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: -5 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="border border-[#FF4B2B] text-[#FF4B2B] text-[12px] font-medium px-3 py-1 rounded-full"
-        >
-          Fully Automated
-        </motion.div>
+      {/* HERO */}
+      <header className="max-w-6xl mx-auto px-6 md:px-16 mt-10 md:mt-16 flex flex-col-reverse md:flex-row items-center gap-8">
+        <div className="md:w-1/2">
+          <motion.div initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45 }}>
+            <div className="inline-flex items-center gap-2 bg-[#EEF2FF] text-[#7C3AED] px-3 py-1 rounded-full text-sm font-medium">Fully Automated</div>
 
-        {/* Headline */}
-        <motion.h1
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="mt-4 text-[26px] md:text-[38px] font-extrabold text-black leading-snug"
-        >
-          Get <span className="text-[#FF4B2B]">Qualified</span> 15+ sales calls per month<br />
-          <span className="font-semibold text-gray-800">without lifting your finger</span>
-        </motion.h1>
+            <h1 className="mt-6 text-3xl md:text-4xl font-extrabold leading-tight">
+              Get <span className="text-[#7C3AED]">10–20 qualified</span> sales calls per month —
+              <br className="hidden md:block" />without extra hires or ad spend
+            </h1>
 
-        {/* CTA Button */}
-        <motion.a
-          href="#book"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4 }}
-          className="mt-6 inline-flex items-center justify-center bg-gradient-to-r from-[#FF4B2B] to-[#ff764a] text-white px-6 py-2.5 rounded-full font-semibold shadow-lg hover:scale-105 transition-all"
-        >
-          Book a free call
-        </motion.a>
+            <p className="mt-4 text-gray-600">{CONFIG.heroSub}. We build, run and optimize the full email outreach funnel so your calendar fills with revenue-ready prospects.</p>
 
-        {/* Hero Illustration */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.97 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.6, type: "spring", stiffness: 100 }}
-          className="mt-12 relative w-[320px] h-[240px] md:w-[800px] md:h-[520px]"
-        >
-          <Image
-            src="/preview image.png"
-            alt="automation-diagram"
-            fill
-            className="object-contain"
-            priority
-          />
+            <div className="mt-6 flex items-center gap-3">
+              <a
+                href={CONFIG.calendly}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-[#7C3AED] to-[#FF4B2B] text-white px-5 py-3 rounded-full font-semibold shadow-lg hover:scale-105 transition-all"
+              >
+                Book a free call
+              </a>
+
+              <a
+                href="#offer"
+                className="inline-flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-[#7C3AED] transition"
+              >
+                See limited offer →
+              </a>
+            </div>
+
+            <div className="mt-6 grid grid-cols-2 gap-4">
+              <div className="bg-white border border-gray-100 rounded-xl p-4 shadow-sm">
+                <div className="text-sm font-semibold">Typical result</div>
+                <div className="mt-1 text-lg font-bold">10–20 calls / month</div>
+              </div>
+              <div className="bg-white border border-gray-100 rounded-xl p-4 shadow-sm">
+                <div className="text-sm font-semibold">Delivery time</div>
+                <div className="mt-1 text-lg font-bold">First calls in 7–21 days</div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+
+        <motion.div initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6 }} className="md:w-1/2 flex justify-center">
+          <div className="w-[360px] md:w-[520px] rounded-2xl shadow-xl overflow-hidden bg-gradient-to-b from-white to-gray-50 p-6">
+            <div className="w-full h-[320px] relative rounded-lg bg-white/50 flex items-center justify-center"> 
+              <Image src="/preview image.png" alt="automation-diagram" fill className="object-contain" />
+            </div>
+
+            <div className="mt-4 grid grid-cols-2 gap-3">
+              <div className="text-xs text-gray-500">Open rate</div>
+              <div className="text-right font-semibold">60–75%</div>
+              <div className="text-xs text-gray-500">Positive replies</div>
+              <div className="text-right font-semibold">8–15%</div>
+            </div>
+          </div>
         </motion.div>
       </header>
 
-      {/* What We Serve Section */}
-<section
-  id="services"
-  className="relative flex flex-col items-center justify-center mt-32 mb-24 px-6 md:px-16"
->
-  {/* Heading */}
-  <h2 className="text-2xl md:text-3xl font-extrabold text-center">
-    What we <span className="text-[#FF4B2B]">serve</span> you
-  </h2>
+      {/* SERVICES */}
+      <section id="services" className="max-w-6xl mx-auto px-6 md:px-16 mt-20">
+        <h2 className="text-2xl md:text-3xl font-extrabold text-center">What we <span className="text-[#7C3AED]">deliver</span></h2>
 
-  {/* Grid Container */}
-  <div className="relative mt-16 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-x-20 md:gap-y-16 max-w-5xl w-full">
-    {/* Card 1 */}
-    <motion.div
-      whileHover={{ y: -6, scale: 1.02 }}
-      className="bg-white shadow-xl rounded-2xl h-[160px] md:h-[180px] flex items-center justify-center transition-all"
-    >
-      <p className="text-gray-500 text-sm md:text-base">Service Box 1</p>
-    </motion.div>
-
-    {/* Card 2 */}
-    <motion.div
-      whileHover={{ y: -6, scale: 1.02 }}
-      className="bg-white shadow-xl rounded-2xl h-[160px] md:h-[180px] flex items-center justify-center transition-all"
-    >
-      <p className="text-gray-500 text-sm md:text-base">Service Box 2</p>
-    </motion.div>
-
-    {/* Card 3 */}
-    <motion.div
-      whileHover={{ y: -6, scale: 1.02 }}
-      className="bg-white shadow-xl rounded-2xl h-[160px] md:h-[180px] flex items-center justify-center transition-all"
-    >
-      <p className="text-gray-500 text-sm md:text-base">Service Box 3</p>
-    </motion.div>
-
-    {/* Card 4 */}
-    <motion.div
-      whileHover={{ y: -6, scale: 1.02 }}
-      className="bg-white shadow-xl rounded-2xl h-[160px] md:h-[180px] flex items-center justify-center transition-all"
-    >
-      <p className="text-gray-500 text-sm md:text-base">Service Box 4</p>
-    </motion.div>
-
-    {/* Dotted Line */}
-    <div className="hidden md:block absolute top-0 bottom-0 left-1/2 w-[2px] -translate-x-1/2 border-l-2 border-dotted border-gray-300 z-0" />
-
-    {/* Center W logo */}
-    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
-      <motion.div
-        animate={{ scale: [1, 1.2, 1] }}
-        transition={{ repeat: Infinity, duration: 2 }}
-        className="bg-white text-[#7C3AED] font-extrabold text-3xl md:text-4xl shadow-md px-4 py-2 rounded-full"
-      >
-        W.
-      </motion.div>
-    </div>
-  </div>
-</section>
-
-{/* How We Work Section */}
-<section
-  id="how"
-  className="flex flex-col md:flex-row items-center justify-center mt-32 mb-24 px-6 md:px-16"
->
-  {/* Left Illustration */}
-  <motion.div
-    initial={{ opacity: 0, x: -20 }}
-    whileInView={{ opacity: 1, x: 0 }}
-    transition={{ duration: 0.6 }}
-    className="md:w-1/2 flex justify-center"
-  >
-    <Image
-      src="/previem.jpg"
-      alt="How we work illustration"
-      width={420}
-      height={320}
-      className="rounded-lg shadow-lg object-contain"
-    />
-  </motion.div>
-
-  {/* Right Steps */}
-  <div className="relative md:w-1/2 flex flex-col justify-center mt-12 md:mt-0 pl-0 md:pl-16">
-    {/* Heading */}
-    <h2 className="text-center md:text-left text-2xl md:text-3xl font-extrabold mb-10">
-      How we <span className="text-[#FF4B2B]">work</span>
-    </h2>
-
-    {/* Step 1 */}
-    <motion.div
-      whileHover={{ scale: 1.02 }}
-      className="flex items-center gap-6 mb-10"
-    >
-      <div className="relative flex flex-col items-center">
-        <div className="w-10 h-10 flex items-center justify-center bg-[#7C3AED] text-white font-bold rounded-lg text-lg shadow-md">
-          1
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+          {[
+            {
+              title: "Done-for-you Outreach",
+              desc: "We build, verify and run your cold email + follow-up sequences on warmed domains.",
+              emoji: "✉️",
+            },
+            {
+              title: "ICP Research & Lead Enrichment",
+              desc: "Target lists built from Apollo/Clay + validation with NeverBounce for high deliverability.",
+              emoji: "🔎",
+            },
+            {
+              title: "Qualification & Booking",
+              desc: "Calls routed through our scheduling flow and qualified using pre-call forms.",
+              emoji: "📅",
+            },
+            {
+              title: "Weekly Reporting",
+              desc: "Transparent weekly reports: emails sent, replies, bookings & next steps.",
+              emoji: "📊",
+            },
+            {
+              title: "Copy & Funnel Strategy",
+              desc: "High-converting email sequences + landing/sales page guidance.",
+              emoji: "✍️",
+            },
+            {
+              title: "Account Migration & Handover",
+              desc: "When you’re ready we migrate the domain and automations under your brand.",
+              emoji: "🔁",
+            },
+          ].map((s, idx) => (
+            <motion.div key={idx} whileHover={{ y: -6 }} className="bg-white rounded-2xl shadow-md p-6 border border-gray-50">
+              <div className="text-2xl">{s.emoji}</div>
+              <h3 className="mt-3 font-semibold text-gray-800">{s.title}</h3>
+              <p className="mt-2 text-sm text-gray-500">{s.desc}</p>
+            </motion.div>
+          ))}
         </div>
-        <div className="h-[80px] w-[2px] bg-dotted border-l-2 border-dotted border-gray-300 absolute top-10"></div>
-      </div>
-      <div className="bg-white shadow-lg rounded-xl px-5 py-4 flex-1">
-        <p className="font-semibold text-gray-800">ICP Research</p>
-        <p className="text-gray-500 text-sm mt-1">
-          We identify and map your ideal customer profile with verified data.
-        </p>
-      </div>
-    </motion.div>
+      </section>
 
-    {/* Step 2 */}
-    <motion.div
-      whileHover={{ scale: 1.02 }}
-      className="flex items-center gap-6 mb-10"
-    >
-      <div className="relative flex flex-col items-center">
-        <div className="w-10 h-10 flex items-center justify-center bg-[#7C3AED] text-white font-bold rounded-lg text-lg shadow-md">
-          2
+      {/* HOW WE WORK */}
+      <section id="how" className="max-w-6xl mx-auto px-6 md:px-16 mt-24">
+        <h2 className="text-2xl md:text-3xl font-extrabold text-center">How we <span className="text-[#7C3AED]">work</span></h2>
+
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+          <div className="col-span-2">
+            <div className="space-y-6">
+              <Step number={1} title="ICP Research" desc="We map the right titles, company size, geography and intent signals for your perfect buyers." />
+              <Step number={2} title="Automation Setup" desc="Domain, 3 inboxes, warmup, multi-step email sequence and scheduling flow." />
+              <Step number={3} title="Optimize & Scale" desc="We analyze replies, A/B subject lines, and scale volume while preserving deliverability." />
+            </div>
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-50">
+            <div className="text-sm text-gray-500">Fast facts</div>
+            <div className="mt-3 flex flex-col gap-2">
+              <Stat label="Leads per month" value="600–800" />
+              <Stat label="Email volume" value="3k–5k / month" />
+              <Stat label="Target result" value="20+ qualified calls / month" />
+            </div>
+
+            <a href={CONFIG.calendly} target="_blank" rel="noreferrer" className="mt-6 inline-block w-full text-center bg-[#7C3AED] text-white py-2 rounded-lg font-semibold">Apply for early slot</a>
+          </div>
         </div>
-        <div className="h-[80px] w-[2px] bg-dotted border-l-2 border-dotted border-gray-300 absolute top-10"></div>
-      </div>
-      <div className="bg-white shadow-lg rounded-xl px-5 py-4 flex-1">
-        <p className="font-semibold text-gray-800">Automation Setup</p>
-        <p className="text-gray-500 text-sm mt-1">
-          We build cold email systems, domains, and inboxes for predictable outreach.
-        </p>
-      </div>
-    </motion.div>
+      </section>
 
-    {/* Step 3 */}
-    <motion.div whileHover={{ scale: 1.02 }} className="flex items-center gap-6">
-      <div className="flex flex-col items-center">
-        <div className="w-10 h-10 flex items-center justify-center bg-[#7C3AED] text-white font-bold rounded-lg text-lg shadow-md">
-          3
+      {/* PROCESS */}
+      <section id="process" className="max-w-6xl mx-auto px-6 md:px-16 mt-28">
+        <h2 className="text-2xl md:text-3xl font-extrabold text-center">Our <span className="text-[#7C3AED]">Process</span></h2>
+
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-4 gap-6">
+          {[
+            { icon: "/process-1.png", title: "Discovery" },
+            { icon: "/process-2.png", title: "Setup" },
+            { icon: "/process-3.png", title: "Automation" },
+            { icon: "/process-4.png", title: "Reporting" },
+          ].map((p, i) => (
+            <motion.div key={i} whileHover={{ y: -6 }} className="bg-white rounded-2xl shadow-md p-6 flex flex-col items-center text-center border border-gray-50">
+              <div className="w-16 h-16 flex items-center justify-center bg-gray-50 rounded-full mb-3">
+                <Image src={p.icon} alt={p.title} width={44} height={44} />
+              </div>
+              <div className="font-semibold">{p.title}</div>
+            </motion.div>
+          ))}
         </div>
-      </div>
-      <div className="bg-white shadow-lg rounded-xl px-5 py-4 flex-1">
-        <p className="font-semibold text-gray-800">Optimize & Scale</p>
-        <p className="text-gray-500 text-sm mt-1">
-          We optimize sequences, analyze metrics, and scale calls month after month.
-        </p>
-      </div>
-    </motion.div>
-  </div>
-</section>
+      </section>
 
-{/* Our Process Section */}
-<section
-  id="process"
-  className="mt-32 mb-24 px-6 md:px-16 text-center flex flex-col items-center"
->
-  <h2 className="text-2xl md:text-3xl font-extrabold mb-14">
-    Our <span className="text-[#FF4B2B]">Process</span>
-  </h2>
+      {/* FOUNDER */}
+      <section className="max-w-6xl mx-auto px-6 md:px-16 mt-28">
+        <div className="bg-white rounded-2xl shadow-lg p-6 md:p-10 flex flex-col md:flex-row items-center gap-6">
+          <div className="w-[220px] h-[260px] relative rounded-lg overflow-hidden">
+            <Image src="/founder.jpg" alt="founder" fill className="object-cover" />
+          </div>
+          <div className="flex-1">
+            <div className="text-sm text-[#7C3AED] font-semibold">Founder</div>
+            <h3 className="mt-2 text-2xl font-bold">Sachin G — Founder @ WallnutFlow</h3>
+            <p className="mt-3 text-gray-600">I build automation systems that help agencies fill their calendar with high-quality prospects while they focus on delivery. Started as a one-person operation — now a performance-first outreach studio.</p>
 
-  <div className="relative flex flex-col md:flex-row justify-center items-center gap-10 md:gap-6 w-full max-w-6xl">
-
-    {/* Process Steps */}
-    {[
-      {
-        icon: "/process-1.png",
-        title: "Discovery",
-      },
-      {
-        icon: "/process-2.png",
-        title: "Setup",
-      },
-      {
-        icon: "/process-3.png",
-        title: "Automation",
-      },
-      {
-        icon: "/process-4.png",
-        title: "Reporting",
-      },
-    ].map((step, index) => (
-      <motion.div
-        key={index}
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4, delay: index * 0.15 }}
-        className="relative bg-white shadow-xl rounded-2xl p-8 flex flex-col items-center justify-center w-[220px] h-[240px]"
-      >
-        <Image
-          src={step.icon}
-          alt={step.title}
-          width={64}
-          height={64}
-          className="mb-4 object-contain"
-        />
-        <p className="font-semibold text-gray-800">{step.title}</p>
-
-        {/* Dotted line between cards */}
-        {index < 3 && (
-          <div className="hidden md:block absolute top-1/2 right-[-34px] w-[60px] border-t-2 border-dotted border-gray-300"></div>
-        )}
-      </motion.div>
-    ))}
-  </div>
-</section>
-
-{/* OUR FOUNDER SECTION */}
-<section className="mt-28 px-6 md:px-20 text-center">
-  <h3 className="text-xs md:text-sm font-semibold tracking-wider text-[#FF4B2B] mb-10">
-    OUR FOUNDER
-  </h3>
-
-  <div className="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-16">
-    {/* Founder Image */}
-    <div className="relative w-[260px] h-[300px] md:w-[300px] md:h-[360px] flex-shrink-0">
-      {/* Red circle behind image */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="absolute w-[220px] h-[220px] bg-[#FF4B2B] rounded-full -z-10"></div>
-      </div>
-
-      <Image
-        src="/founder.jpg"
-        alt="Founder"
-        fill
-        className="object-cover rounded-md grayscale"
-      />
-    </div>
-
-    {/* Founder Card */}
-    <div className="relative bg-white shadow-xl rounded-xl p-6 md:p-8 w-full md:max-w-lg text-left">
-      <div className="flex items-center gap-4 mb-4">
-        <Image
-          src="/founder.jpg"
-          alt="Profile"
-          width={48}
-          height={48}
-          className="rounded-full"
-        />
-        <div>
-          <p className="font-semibold text-gray-800">Sachin G</p>
-          <p className="text-sm text-gray-500">Founder @ WallnutFlow</p>
+            <div className="mt-4 flex items-center gap-3">
+              <a href={CONFIG.calendly} target="_blank" rel="noreferrer" className="inline-block bg-[#7C3AED] text-white px-4 py-2 rounded-full font-semibold">Book a strategy call</a>
+              <a href="#contact" className="inline-block text-sm text-gray-700">Send a message</a>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div className="bg-white rounded-lg shadow-md p-4">
-        <p className="text-sm text-gray-700 leading-relaxed">
-          “I’m the Founder of WallnutFlow. We help Digital Marketing Agencies
-          to get 10–20 Qualified sales calls per month by building a done-for-you
-          Automation system, so it works 24/7 and fills your calendar with
-          qualified calls.”
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+      {/* TOOLS */}
+      <section className="max-w-6xl mx-auto px-6 md:px-16 mt-24 text-center">
+        <p className="text-gray-700 text-sm md:text-base">We run our systems with industry tools trusted by thousands of agencies.</p>
+        <div className="mt-8 grid grid-cols-3 md:grid-cols-6 gap-4 items-center justify-center">
+          {[
+            "Apollo.io",
+            "Instantly.ai",
+            "Google Workspace",
+            "ChatGPT",
+            "NeverBounce",
+            "Calendly",
+          ].map((t, i) => (
+            <div key={i} className="bg-white border border-gray-100 rounded-xl py-3 px-4 text-sm font-medium shadow-sm">{t}</div>
+          ))}
+        </div>
+      </section>
 
-{/* TOOLS SECTION */}
-<section className="mt-24 px-6 md:px-20 text-center pb-28">
-  <p className="text-gray-700 text-sm md:text-base">
-    We build our systems using industry-standard tools trusted by{" "}
-    <span className="font-bold text-[#FF4B2B]">10,000+ agencies</span> worldwide.
-  </p>
+      {/* OFFER */}
+      <section id="offer" className="max-w-6xl mx-auto px-6 md:px-16 mt-28">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h2 className="text-2xl md:text-3xl font-extrabold">Early Partner Program</h2>
+            <p className="mt-3 text-gray-600">First 5 agencies get a full Proof-of-Concept month for <span className="font-semibold">$199</span>. Includes full setup, running, and weekly reports. Continue at <span className="font-semibold">$1000/mo</span> after month one.</p>
 
-  <div className="mt-10 flex flex-wrap justify-center gap-6 md:gap-10">
-    {[
-      { name: "Apollo.io", color: "bg-[#FFF9E6]" },
-      { name: "Instantly.ai", color: "bg-[#EEF2FF]" },
-      { name: "Google Workspace", color: "bg-[#FFF7F0]" },
-      { name: "ChatGPT", color: "bg-[#F4F4F4]" },
-      { name: "Google Meet", color: "bg-[#E8F5E9]" },
-      { name: "Payoneer", color: "bg-[#FFF1EC]" },
-    ].map((tool, idx) => (
-      <div
-        key={idx}
-        className={`${tool.color} flex items-center gap-2 border border-gray-200 shadow-sm px-4 py-2 rounded-full text-gray-700 font-medium text-sm hover:shadow-md transition-all`}
-      >
-        {tool.name}
-      </div>
-    ))}
-  </div>
-</section>
+            <ul className="mt-6 space-y-3 text-gray-700">
+              <li>✅ 3 inboxes & warmed domains</li>
+              <li>✅ 600–800 verified ICP leads setup</li>
+              <li>✅ 4–5 email sequence & booking flow</li>
+              <li>✅ Weekly call + transparent reporting</li>
+            </ul>
 
-{/* OUR DELIVERY PROCESS SECTION */}
-<section className="mt-28 px-6 md:px-20 text-center">
-  {/* Title */}
-  <h2 className="text-2xl font-bold">
-    Our <span className="text-[#7C3AED]">Delivery</span> Process
-  </h2>
+            <div className="mt-6 flex gap-3">
+              <a href={CONFIG.calendly} className="bg-gradient-to-r from-[#7C3AED] to-[#FF4B2B] text-white px-5 py-3 rounded-full font-semibold">Apply for partner slot</a>
+              <a href="#contact" className="px-5 py-3 rounded-full border border-gray-200">Contact us</a>
+            </div>
+          </div>
 
-  {/* Layout */}
-  <div className="mt-14 flex flex-col md:flex-row items-center justify-center gap-12 md:gap-20">
-    
-    {/* Video Section */}
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="relative w-full md:w-[500px] aspect-video rounded-2xl overflow-hidden shadow-lg bg-gray-200 flex items-center justify-center"
-    >
-      {/* If you want an embedded video, uncomment below */}
-      {/* <video
-        src="/delivery-video.mp4"
-        controls
-        className="w-full h-full object-cover rounded-2xl"
-      /> */}
+          <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+            <div className="text-sm text-gray-500">Proof-of-Concept</div>
+            <div className="mt-3 text-3xl font-bold">$199</div>
+            <div className="mt-2 text-sm text-gray-600">One-time (first 5 agencies)</div>
 
-      {/* Placeholder Play Icon (if no video yet) */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <button className="w-16 h-16 bg-white rounded-full shadow-md flex items-center justify-center hover:scale-105 transition-transform">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-6 h-6 text-gray-800 ml-1"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path d="M8 5v14l11-7z" />
-          </svg>
-        </button>
-      </div>
-    </motion.div>
+            <ul className="mt-6 text-gray-700 space-y-2">
+              <li>✅ Setup & Launch</li>
+              <li>✅ First month delivery</li>
+              <li>✅ Weekly reporting</li>
+            </ul>
 
-    {/* Text Cards */}
-    <div className="flex flex-col gap-6 w-full md:w-[400px]">
-      {[
-        {
-          title: "Step 1 – Setup Call",
-          desc: "We begin with a 1-on-1 call to understand your systems, goals, and ICP before deployment.",
-        },
-        {
-          title: "Step 2 – Launch & Monitor",
-          desc: "Your automated cold email system starts running — we monitor delivery, reply rate, and bookings.",
-        },
-      ].map((step, idx) => (
-        <motion.div
-          key={idx}
-          whileHover={{ y: -3 }}
-          className="bg-white rounded-xl shadow-lg text-left p-5 md:p-6 transition-all duration-300"
-        >
-          <h3 className="font-semibold text-gray-800 text-base mb-1">
-            {step.title}
-          </h3>
-          <p className="text-gray-600 text-sm leading-relaxed">{step.desc}</p>
-        </motion.div>
-      ))}
-    </div>
-  </div>
-</section>
+            <a href={CONFIG.calendly} className="mt-6 block text-center bg-[#7C3AED] text-white rounded-full py-3 font-semibold">Get early access</a>
+          </div>
+        </div>
+      </section>
 
-{/* WE OFFER SECTION */}
-<section className="mt-28 px-6 md:px-20 text-center">
-  {/* Heading */}
-  <h3 className="text-lg font-semibold text-gray-800">We Offer</h3>
-  <h2 className="text-2xl md:text-3xl font-extrabold mt-3 leading-snug">
-    Try the <span className="text-black">WallnutFlow System</span> — Prove it Works for<br className="hidden md:block" />
-    Your Agency Before You Commit
-  </h2>
-  <p className="text-gray-600 mt-3 text-sm md:text-base max-w-2xl mx-auto">
-    We’re so confident in our system that we’ll build and run your entire outreach engine for 30 days —
-    and let the results speak for themselves.
-  </p>
+      {/* CONTACT / ONBOARDING */}
+      <section id="contact" className="max-w-4xl mx-auto px-6 md:px-16 mt-28 mb-20">
+        <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 border border-gray-50">
+          <h3 className="text-xl font-bold">Start your Proof-of-Concept</h3>
+          <p className="mt-2 text-gray-600">Fill the quick form and we’ll setup a kickoff call within 48 hours.</p>
 
-  {/* Offer Container */}
-  <div className="relative mt-14 flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16">
-    
-    {/* Left – Proof of Concept Card */}
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="bg-white rounded-2xl shadow-xl p-6 md:p-8 text-left max-w-lg relative"
-    >
-      {/* Paperclip icon */}
-      <div className="absolute -top-4 right-8 bg-black text-white w-8 h-8 flex items-center justify-center rounded-full shadow-md">
-        📎
-      </div>
+          <form className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input className="p-3 border border-gray-100 rounded-lg" placeholder="Full name" />
+            <input className="p-3 border border-gray-100 rounded-lg" placeholder="Business / Agency name" />
+            <input className="p-3 border border-gray-100 rounded-lg col-span-2" placeholder="Work email" />
+            <input className="p-3 border border-gray-100 rounded-lg" placeholder="Website / LinkedIn" />
+            <input className="p-3 border border-gray-100 rounded-lg" placeholder="Calendly link (optional)" />
 
-      <h3 className="font-bold text-lg mb-4 flex items-center gap-2">
-        <span>📜</span> What You Get in the 30-Day Proof-of-Concept
-      </h3>
+            <textarea className="p-3 border border-gray-100 rounded-lg col-span-2" placeholder="Describe your ideal client (ICP) & offer"></textarea>
 
-      <ul className="space-y-3 text-gray-700">
-        <li className="flex items-start gap-2">
-          ✅ <span>Done-for-you Cold Email Automation setup<br /><span className="text-gray-500 text-sm">(3 inboxes, verified leads, and outreach sequences)</span></span>
-        </li>
-        <li className="flex items-start gap-2">
-          ✅ <span>Strategic sales funnel customized to your ICP</span>
-        </li>
-        <li className="flex items-start gap-2">
-          ✅ <span>Weekly reporting: opens, replies, and booked calls</span>
-        </li>
-        <li className="flex items-start gap-2">
-          ✅ <span>Full transparency — you see exactly how many qualified calls you get</span>
-        </li>
-      </ul>
+            <div className="col-span-2 flex items-center gap-3">
+              <input type="checkbox" id="agree" />
+              <label htmlFor="agree" className="text-sm text-gray-600">I confirm payment of $199 (one-time) for Proof-of-Concept month</label>
+            </div>
 
-      {/* Seal Icon (Bottom Left) */}
-      <div className="absolute -bottom-5 left-6 text-3xl">🏅</div>
-    </motion.div>
+            <button type="button" className="col-span-2 bg-[#7C3AED] text-white py-3 rounded-full font-semibold">Start Proof-of-Concept</button>
+          </form>
+        </div>
+      </section>
 
-    {/* Right – Pricing Box */}
-    <motion.div
-      initial={{ opacity: 0, scale: 0.95 }}
-      whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.6, delay: 0.2 }}
-      className="relative bg-white border border-gray-100 rounded-2xl p-6 w-[260px] shadow-[0_0_25px_-5px_rgba(124,58,237,0.4)] hover:shadow-[0_0_30px_-4px_rgba(124,58,237,0.6)] transition-all duration-300"
-    >
-      <h4 className="font-bold text-lg mb-4">For $199 only</h4>
+      {/* FOOTER */}
+      <footer className="bg-gray-50 border-t border-gray-100 mt-20 py-8">
+        <div className="max-w-6xl mx-auto px-6 md:px-16 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div>
+            <div className="font-bold text-lg">{CONFIG.company}.</div>
+            <div className="text-sm text-gray-500 mt-1">Founder — {CONFIG.founder}</div>
+          </div>
 
-      <ul className="space-y-2 text-gray-700 text-sm mb-6">
-        <li>✅ Setup</li>
-        <li>✅ Maintenance</li>
-        <li>✅ Reporting</li>
-        <li>✅ Delivery</li>
-      </ul>
+          <div className="text-sm text-gray-500">© {new Date().getFullYear()} WallnutFlow. All rights reserved.</div>
 
-      <div className="bg-black text-white text-lg font-semibold py-2 rounded-xl">
-        $199 / once
-      </div>
-
-      <p className="text-gray-500 text-xs mt-2">
-        * valid only for first 30 days<br />* non-refundable
-      </p>
-
-      {/* Glow Border (optional neon effect) */}
-      <div className="absolute inset-0 rounded-2xl border border-purple-500/50 pointer-events-none"></div>
-    </motion.div>
-  </div>
-</section>
-
-
-</main>
+          <div className="flex items-center gap-3">
+            <a href="#" className="text-sm text-gray-600">Privacy</a>
+            <a href="#" className="text-sm text-gray-600">Terms</a>
+          </div>
+        </div>
+      </footer>
+    </main>
   );
 }
+
+
+// Small helper components
+function Step({ number, title, desc }) {
+  return (
+    <motion.div whileHover={{ y: -4 }} className="bg-white rounded-xl shadow-sm p-4 border border-gray-50">
+      <div className="flex items-start gap-3">
+        <div className="w-10 h-10 flex items-center justify-center bg-[#7C3AED] text-white rounded-lg font-bold">{number}</div>
+        <div>
+          <div className="font-semibold">{title}</div>
+          <div className="text-sm text-gray-500 mt-1">{desc}</div>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
+function Stat({ label, value }) {
+  return (
+    <div className="flex items-center justify-between bg-gray-50 px-3 py-2 rounded-lg">
+      <div className="text-sm text-gray-500">{label}</div>
+      <div className="font-semibold">{value}</div>
+    </div>
+  );
+}
+
 
 
 
