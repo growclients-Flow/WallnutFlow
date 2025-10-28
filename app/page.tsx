@@ -350,6 +350,154 @@ export default function Home() {
   </div>
 </section>
 
+{/* OUR DELIVERY PROCESS SECTION */}
+<section className="mt-28 px-6 md:px-20 text-center">
+  {/* Title */}
+  <h2 className="text-2xl font-bold">
+    Our <span className="text-[#7C3AED]">Delivery</span> Process
+  </h2>
+
+  {/* Layout */}
+  <div className="mt-14 flex flex-col md:flex-row items-center justify-center gap-12 md:gap-20">
+    
+    {/* Video Section */}
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      className="relative w-full md:w-[500px] aspect-video rounded-2xl overflow-hidden shadow-lg bg-gray-200 flex items-center justify-center"
+    >
+      {/* If you want an embedded video, uncomment below */}
+      {/* <video
+        src="/delivery-video.mp4"
+        controls
+        className="w-full h-full object-cover rounded-2xl"
+      /> */}
+
+      {/* Placeholder Play Icon (if no video yet) */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <button className="w-16 h-16 bg-white rounded-full shadow-md flex items-center justify-center hover:scale-105 transition-transform">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-6 h-6 text-gray-800 ml-1"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path d="M8 5v14l11-7z" />
+          </svg>
+        </button>
+      </div>
+    </motion.div>
+
+    {/* Text Cards */}
+    <div className="flex flex-col gap-6 w-full md:w-[400px]">
+      {[
+        {
+          title: "Step 1 – Setup Call",
+          desc: "We begin with a 1-on-1 call to understand your systems, goals, and ICP before deployment.",
+        },
+        {
+          title: "Step 2 – Launch & Monitor",
+          desc: "Your automated cold email system starts running — we monitor delivery, reply rate, and bookings.",
+        },
+      ].map((step, idx) => (
+        <motion.div
+          key={idx}
+          whileHover={{ y: -3 }}
+          className="bg-white rounded-xl shadow-lg text-left p-5 md:p-6 transition-all duration-300"
+        >
+          <h3 className="font-semibold text-gray-800 text-base mb-1">
+            {step.title}
+          </h3>
+          <p className="text-gray-600 text-sm leading-relaxed">{step.desc}</p>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
+
+{/* WE OFFER SECTION */}
+<section className="mt-28 px-6 md:px-20 text-center">
+  {/* Heading */}
+  <h3 className="text-lg font-semibold text-gray-800">We Offer</h3>
+  <h2 className="text-2xl md:text-3xl font-extrabold mt-3 leading-snug">
+    Try the <span className="text-black">WallnutFlow System</span> — Prove it Works for<br className="hidden md:block" />
+    Your Agency Before You Commit
+  </h2>
+  <p className="text-gray-600 mt-3 text-sm md:text-base max-w-2xl mx-auto">
+    We’re so confident in our system that we’ll build and run your entire outreach engine for 30 days —
+    and let the results speak for themselves.
+  </p>
+
+  {/* Offer Container */}
+  <div className="relative mt-14 flex flex-col md:flex-row justify-center items-center gap-8 md:gap-16">
+    
+    {/* Left – Proof of Concept Card */}
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      className="bg-white rounded-2xl shadow-xl p-6 md:p-8 text-left max-w-lg relative"
+    >
+      {/* Paperclip icon */}
+      <div className="absolute -top-4 right-8 bg-black text-white w-8 h-8 flex items-center justify-center rounded-full shadow-md">
+        📎
+      </div>
+
+      <h3 className="font-bold text-lg mb-4 flex items-center gap-2">
+        <span>📜</span> What You Get in the 30-Day Proof-of-Concept
+      </h3>
+
+      <ul className="space-y-3 text-gray-700">
+        <li className="flex items-start gap-2">
+          ✅ <span>Done-for-you Cold Email Automation setup<br /><span className="text-gray-500 text-sm">(3 inboxes, verified leads, and outreach sequences)</span></span>
+        </li>
+        <li className="flex items-start gap-2">
+          ✅ <span>Strategic sales funnel customized to your ICP</span>
+        </li>
+        <li className="flex items-start gap-2">
+          ✅ <span>Weekly reporting: opens, replies, and booked calls</span>
+        </li>
+        <li className="flex items-start gap-2">
+          ✅ <span>Full transparency — you see exactly how many qualified calls you get</span>
+        </li>
+      </ul>
+
+      {/* Seal Icon (Bottom Left) */}
+      <div className="absolute -bottom-5 left-6 text-3xl">🏅</div>
+    </motion.div>
+
+    {/* Right – Pricing Box */}
+    <motion.div
+      initial={{ opacity: 0, scale: 0.95 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.6, delay: 0.2 }}
+      className="relative bg-white border border-gray-100 rounded-2xl p-6 w-[260px] shadow-[0_0_25px_-5px_rgba(124,58,237,0.4)] hover:shadow-[0_0_30px_-4px_rgba(124,58,237,0.6)] transition-all duration-300"
+    >
+      <h4 className="font-bold text-lg mb-4">For $199 only</h4>
+
+      <ul className="space-y-2 text-gray-700 text-sm mb-6">
+        <li>✅ Setup</li>
+        <li>✅ Maintenance</li>
+        <li>✅ Reporting</li>
+        <li>✅ Delivery</li>
+      </ul>
+
+      <div className="bg-black text-white text-lg font-semibold py-2 rounded-xl">
+        $199 / once
+      </div>
+
+      <p className="text-gray-500 text-xs mt-2">
+        * valid only for first 30 days<br />* non-refundable
+      </p>
+
+      {/* Glow Border (optional neon effect) */}
+      <div className="absolute inset-0 rounded-2xl border border-purple-500/50 pointer-events-none"></div>
+    </motion.div>
+  </div>
+</section>
+
+
 </main>
   );
 }
