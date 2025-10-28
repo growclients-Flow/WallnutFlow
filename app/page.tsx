@@ -75,6 +75,67 @@ export default function Home() {
           />
         </motion.div>
       </header>
+
+      {/* What We Serve Section */}
+<section
+  id="services"
+  className="relative flex flex-col items-center justify-center mt-32 mb-24 px-6 md:px-16"
+>
+  {/* Heading */}
+  <h2 className="text-2xl md:text-3xl font-extrabold text-center">
+    What we <span className="text-[#FF4B2B]">serve</span> you
+  </h2>
+
+  {/* Grid Container */}
+  <div className="relative mt-16 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-x-20 md:gap-y-16 max-w-5xl w-full">
+    {/* Card 1 */}
+    <motion.div
+      whileHover={{ y: -6, scale: 1.02 }}
+      className="bg-white shadow-xl rounded-2xl h-[160px] md:h-[180px] flex items-center justify-center transition-all"
+    >
+      <p className="text-gray-500 text-sm md:text-base">Service Box 1</p>
+    </motion.div>
+
+    {/* Card 2 */}
+    <motion.div
+      whileHover={{ y: -6, scale: 1.02 }}
+      className="bg-white shadow-xl rounded-2xl h-[160px] md:h-[180px] flex items-center justify-center transition-all"
+    >
+      <p className="text-gray-500 text-sm md:text-base">Service Box 2</p>
+    </motion.div>
+
+    {/* Card 3 */}
+    <motion.div
+      whileHover={{ y: -6, scale: 1.02 }}
+      className="bg-white shadow-xl rounded-2xl h-[160px] md:h-[180px] flex items-center justify-center transition-all"
+    >
+      <p className="text-gray-500 text-sm md:text-base">Service Box 3</p>
+    </motion.div>
+
+    {/* Card 4 */}
+    <motion.div
+      whileHover={{ y: -6, scale: 1.02 }}
+      className="bg-white shadow-xl rounded-2xl h-[160px] md:h-[180px] flex items-center justify-center transition-all"
+    >
+      <p className="text-gray-500 text-sm md:text-base">Service Box 4</p>
+    </motion.div>
+
+    {/* Dotted Line */}
+    <div className="hidden md:block absolute top-0 bottom-0 left-1/2 w-[2px] -translate-x-1/2 border-l-2 border-dotted border-gray-300 z-0" />
+
+    {/* Center W logo */}
+    <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+      <motion.div
+        animate={{ scale: [1, 1.2, 1] }}
+        transition={{ repeat: Infinity, duration: 2 }}
+        className="bg-white text-[#7C3AED] font-extrabold text-3xl md:text-4xl shadow-md px-4 py-2 rounded-full"
+      >
+        W.
+      </motion.div>
+    </div>
+  </div>
+</section>
+
     </main>
   );
 }
