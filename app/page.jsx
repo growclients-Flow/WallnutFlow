@@ -1,4 +1,6 @@
-import React from "react";
+'use client';
+
+
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -206,7 +208,7 @@ export default function WallnutLanding() {
           <div className="flex-1">
             <div className="text-sm text-[#7C3AED] font-semibold">Founder</div>
             <h3 className="mt-2 text-2xl font-bold">Sachin G — Founder @ WallnutFlow</h3>
-            <p className="mt-3 text-gray-600">I build automation systems that help agencies fill their calendar with high-quality prospects while they focus on delivery. Started as a one-person operation — now a performance-first outreach studio.</p>
+            <p className="mt-3 text-gray-600"> We build automation systems that help agencies fill their calendar with high-quality prospects while they focus on delivery. Started as a one-person operation — now a performance-first outreach studio.</p>
 
             <div className="mt-4 flex items-center gap-3">
               <a href={CONFIG.calendly} target="_blank" rel="noreferrer" className="inline-block bg-[#7C3AED] text-white px-4 py-2 rounded-full font-semibold">Book a strategy call</a>
