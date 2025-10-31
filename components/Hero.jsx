@@ -54,18 +54,13 @@ export default function Hero() {
         transition={{ duration: 0.8, delay: 0.5 }}
         className="mt-12 flex justify-center"
       >
-        <div className="relative w-full md:w-[920px] h-[360px] rounded-2xl bg-gray-50 border border-gray-200 shadow-inner flex items-center justify-center">
-          {/* Placeholder image */}
-          <div className="w-[80%] h-[80%] flex items-center justify-center bg-gray-100 rounded-xl border border-gray-300">
             <Image
               src="/previewimage.png"
               alt="Preview diagram placeholder"
               width={600}
               height={300}
-              className="rounded-lg object-contain opacity-80"
+              className="rounded-lg object-contain opacity-100"
             />
-          </div>
-        </div>
       </motion.div>
     </header>
   );
