@@ -87,9 +87,9 @@ export default function Page() {
 
       {/* WHAT WE SERVES (two-column 2x2 boxes as screenshot) */}
       <section id="services" className="max-w-5xl mx-auto px-6 md:px-16 mt-16">
+        <h3 className="font-bold text-lg">What we <span className="text-[#E94B3C]">serves</span> you</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-white rounded-2xl shadow p-6">
-            <h3 className="font-bold text-lg">What we <span className="text-[#E94B3C]">serves</span> you</h3>
             <div className="mt-6 grid grid-cols-1 gap-4">
               <div className="bg-white border border-gray-100 rounded-xl p-5 shadow-sm">
                 <div className="font-semibold">Done-for-you Outreach</div>
@@ -137,17 +137,6 @@ export default function Page() {
               </div>
             </div>
           </div>
-
-          <aside className="bg-white rounded-2xl p-6 shadow text-sm">
-            <div className="text-gray-500">Fast facts</div>
-            <div className="mt-3 space-y-3">
-              <Stat label="Leads per month" value="600–800" />
-              <Stat label="Email volume" value="3k–4k / month" />
-              <Stat label="Target result" value="15+ qualified calls / month" />
-            </div>
-
-            <a href={CONFIG.calendly} target="_blank" rel="noreferrer" className="mt-6 inline-block w-full text-center bg-[#E94B3C] text-white py-2 rounded-lg font-semibold">Apply for early slot</a>
-          </aside>
         </div>
       </section>
 
