@@ -58,7 +58,7 @@ export default function Hero() {
           {/* Placeholder image */}
           <div className="w-[80%] h-[80%] flex items-center justify-center bg-gray-100 rounded-xl border border-gray-300">
             <Image
-              src="\public\previewimage.png"
+              src="/previewimage.png"
               alt="Preview diagram placeholder"
               width={600}
               height={300}
