@@ -23,17 +23,6 @@ export default function HowWorks(){
             </div>
           </div>
         </div>
-
-        <aside className="bg-white rounded-2xl p-6 shadow text-sm">
-          <div className="text-gray-500">Fast facts</div>
-          <div className="mt-3 space-y-3">
-            <Stat label="Leads per month" value="600–800" />
-            <Stat label="Email volume" value="3k–4k / month" />
-            <Stat label="Target result" value="15+ qualified calls / month" />
-          </div>
-
-          <a href="https://calendly.com/wallnutflow" target="_blank" rel="noreferrer" className="mt-6 inline-block w-full text-center bg-wallnut text-white py-2 rounded-lg font-semibold">Apply for early slot</a>
-        </aside>
       </div>
     </section>
   );

@@ -57,8 +57,8 @@ export default function Hero() {
             <Image
               src="/previewimage.png"
               alt="Preview diagram placeholder"
-              width={600}
-              height={300}
+              width={1000}
+              height={500}
               className="rounded-lg object-contain opacity-100"
             />
       </motion.div>
