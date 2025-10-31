@@ -18,7 +18,6 @@ export default function Page() {
       <nav className="flex items-center justify-between px-6 md:px-20 py-5 max-w-6xl mx-auto">
         <div className="flex items-center gap-3">
           <div className="text-xl md:text-2xl font-extrabold text-[#E94B3C] tracking-tight">{CONFIG.company}.</div>
-          <div className="hidden md:block text-sm text-gray-500">Done-for-you outreach & appointment systems</div>
         </div>
 
         <div className="hidden md:flex items-center gap-6 text-gray-700">
@@ -30,7 +29,6 @@ export default function Page() {
         </div>
 
         <div className="flex items-center gap-3">
-          <a href={CONFIG.siteUrl} className="hidden md:inline-block text-sm text-gray-600">{CONFIG.siteUrl}</a>
           <a
             href={CONFIG.calendly}
             target="_blank"
