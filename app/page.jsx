@@ -49,7 +49,7 @@ export default function Home() {
 
         <Deliverability />
         {/* FINAL CTA SECTION */}
-<section className="max-w-6xl mx-auto px-6 md:px-16 mt-20 mb-24 text-center">
+<section className="max-w-6xl mx-auto px-6 md:px-16 mt-30 mb-24 text-center">
   <div className="bg-gradient-to-br from-orange-500 to-purple-600 text-white rounded-3xl p-10 md:p-16 shadow-[0_10px_40px_rgba(0,0,0,0.2)] relative overflow-hidden">
     {/* Glow effect */}
     <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.1),transparent_70%)] pointer-events-none"></div>
