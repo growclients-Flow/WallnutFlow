@@ -28,12 +28,13 @@ export default function Services() {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="text-center text-4xl md:text-5xl font-extrabold text-gray-900"
+        className="text-center text-4xl md:text-4xl font-extrabold text-gray-900"
       >
         What we <span className="text-orange-600">serve</span> you
       </motion.h2>
 
       {/* Card Grid */}
+      <div className="bg-white rounded-2xl shadow p-6">
       <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-8">
         {services.map((item, i) => (
           <motion.div
@@ -48,6 +49,7 @@ export default function Services() {
           </motion.div>
         ))}
       </div>
+    </div>
     </section>
   );
 }
