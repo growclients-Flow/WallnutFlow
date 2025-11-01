@@ -48,7 +48,6 @@ export default function Home() {
         </section>
 
         <Deliverability />
-        <Offer />
         <Contact />
       </main>
 
