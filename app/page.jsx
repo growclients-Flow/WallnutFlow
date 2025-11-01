@@ -11,6 +11,7 @@ import Deliverability from '../components/Deliverability';
 import Offer from '../components/Offer';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -28,7 +29,13 @@ export default function Home() {
           <HowWorks />
           <Process />
           <Founder />
-          <Tools />
+            <Image
+             src="/tools.png"
+             alt="Preview diagram placeholder"
+             width={1000}
+             height={500}
+             className="rounded-lg object-contain opacity-100"
+             />
           <Deliverability />
           <Offer />
           <Contact />
