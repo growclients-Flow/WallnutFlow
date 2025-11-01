@@ -119,7 +119,7 @@ export default function Deliverables() {
       </div>
 
       {/* Satisfaction Guarantee Section */}
-<div className="mt-10 flex flex-col md:flex-row items-center justify-between bg-white border border-gray-100 rounded-2xl p-6 shadow-[0_4px_30px_rgba(0,0,0,0.1)]">
+<div className="mt-6 flex flex-col md:flex-row items-center justify-between bg-white border border-gray-100 rounded-2xl p-6 shadow-[0_4px_30px_rgba(0,0,0,0.1)]">
   <div>
     <h4 className="text-lg font-semibold text-gray-900">
       Is you didn’t satisfied with the result in this 30 days?? Don’t worry.

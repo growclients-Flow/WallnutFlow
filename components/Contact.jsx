@@ -1,28 +1,42 @@
-'use client';
-export default function Contact(){
-  return (
-    <section id="contact" className="max-w-4xl mx-auto px-6 md:px-16 mt-6 mb-20">
-      <div className="bg-white rounded-2xl shadow-lg p-8 md:p-12 border border-gray-50">
-        <h3 className="text-xl font-bold">Start your Proof-of-Concept</h3>
-        <p className="mt-2 text-gray-600">Fill the quick form and we’ll setup a kickoff call within 48 hours.</p>
+{/* FINAL CTA SECTION */}
+<section className="max-w-6xl mx-auto px-6 md:px-16 mt-20 mb-24 text-center">
+  <div className="bg-gradient-to-br from-orange-500 to-purple-600 text-white rounded-3xl p-10 md:p-16 shadow-[0_10px_40px_rgba(0,0,0,0.2)] relative overflow-hidden">
+    {/* Glow effect */}
+    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.1),transparent_70%)] pointer-events-none"></div>
 
-        <form className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-          <input className="p-3 border border-gray-100 rounded-lg" placeholder="Full name" />
-          <input className="p-3 border border-gray-100 rounded-lg" placeholder="Business / Agency name" />
-          <input className="p-3 border border-gray-100 rounded-lg col-span-2" placeholder="Work email" />
-          <input className="p-3 border border-gray-100 rounded-lg" placeholder="Website / LinkedIn" />
-          <input className="p-3 border border-gray-100 rounded-lg" placeholder="Calendly link (optional)" />
+    <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
+      Ready to Get <span className="text-yellow-300">15+ Qualified Sales Calls</span> Every Month?
+    </h2>
+    <p className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto mb-8">
+      Let’s build your outreach system once — and let it bring you clients every month.
+      No stress. No hiring. No wasted ad spend. Just results.
+    </p>
 
-          <textarea className="p-3 border border-gray-100 rounded-lg col-span-2" placeholder="Describe your ideal client (ICP) & offer"></textarea>
+    {/* CTA Buttons */}
+    <div className="flex flex-col sm:flex-row justify-center gap-4">
+      <a
+        href="https://calendly.com/your-link"
+        target="_blank"
+        rel="noreferrer"
+        className="bg-white text-gray-900 font-semibold px-8 py-4 rounded-full shadow-md hover:scale-105 transition-all"
+      >
+        🚀 Book Your Free Strategy Call
+      </a>
 
-          <div className="col-span-2 flex items-center gap-3">
-            <input type="checkbox" id="agree" />
-            <label htmlFor="agree" className="text-sm text-gray-600">I confirm payment of $199 (one-time) for Proof-of-Concept month</label>
-          </div>
+      <a
+        href="https://wallnutflow.com/offer-details"
+        target="_blank"
+        rel="noreferrer"
+        className="bg-transparent border border-white text-white px-8 py-4 rounded-full font-medium hover:bg-white hover:text-gray-900 transition-all"
+      >
+        View $199 Early Offer
+      </a>
+    </div>
 
-          <button type="button" className="col-span-2 bg-wallnut text-white py-3 rounded-full font-semibold">Start Proof-of-Concept</button>
-        </form>
-      </div>
-    </section>
-  );
-}
+    {/* Credibility line */}
+    <p className="mt-8 text-sm text-white/80">
+      Trusted by 10,000+ founders & marketing teams worldwide 🌍
+    </p>
+  </div>
+</section>
+
