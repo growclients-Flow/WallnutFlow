@@ -18,7 +18,7 @@ export default function HowWorks() {
           <div className="w-full md:w-1/2">
             <div className="w-full h-56 md:h-72 bg-gray-50 rounded-xl flex items-center justify-center border border-gray-100 overflow-hidden">
               <Image
-                src="/automation-diagram.png"
+                src="/automation.jpg"
                 alt="Automation workflow diagram"
                 width={450}
                 height={260}
