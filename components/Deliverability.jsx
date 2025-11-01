@@ -5,33 +5,113 @@ export default function Deliverability() {
     <section className="max-w-6xl mx-auto px-6 md:px-16 mt-28">
       {/* Section Heading */}
       <h2 className="text-center text-4xl md:text-5xl font-extrabold text-gray-900">
-        Our <span className="text-orange-600">Deliverability</span> Process
+        Our <span className="text-orange-600">Deliverables</span>
       </h2>
 
+      <p className="text-center text-gray-600 mt-4 max-w-3xl mx-auto text-base md:text-lg">
+        Everything your agency gets when you partner with WallnutFlow — built for results, transparency, 
+        and long-term ROI. Whether you’re on the <span className="font-semibold text-gray-800">$199 Early Partner Offer</span> 
+        or our <span className="font-semibold text-gray-800">Regular Plan ($700 + $1000/mo)</span>, you get a complete 
+        done-for-you cold email automation system that delivers consistent, qualified sales calls every month.
+      </p>
+
       {/* Content Grid */}
-      <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
-        {/* Diagram / Video Placeholder */}
-        <div className="col-span-2 bg-white rounded-2xl shadow-md border border-gray-100 p-8 flex items-center justify-center">
-          <div className="w-full h-60 md:h-72 bg-gray-50 rounded-xl flex items-center justify-center border border-gray-200">
-            <span className="text-gray-400 text-sm md:text-base">
-              [Deliverability video / diagram placeholder]
-            </span>
+      <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-8">
+        {[
+          {
+            emoji: "🚀",
+            title: "Automation Setup",
+            desc: "3 fully warmed inboxes, custom domain, and a complete outreach system that runs on autopilot for your agency.",
+          },
+          {
+            emoji: "🎯",
+            title: "ICP Research & Lead Enrichment",
+            desc: "600–800 verified, ideal client leads scraped and enriched monthly using Apollo.io + NeverBounce for accuracy.",
+          },
+          {
+            emoji: "✉️",
+            title: "Cold Email Sequences",
+            desc: "High-converting, personalized 4–6 email copy sequences crafted to attract and convert high-intent prospects.",
+          },
+          {
+            emoji: "📅",
+            title: "Qualified Booked Calls",
+            desc: "Expect 10–20 qualified booked calls every month — each verified and tracked transparently before delivery.",
+          },
+          {
+            emoji: "📊",
+            title: "Weekly Reporting",
+            desc: "Detailed breakdown of deliverability, open/reply rates, and booked calls so you can monitor growth weekly.",
+          },
+          {
+            emoji: "💼",
+            title: "Ownership & Migration",
+            desc: "After the campaign proves ROI, we hand over full access — your inboxes, leads, automations, and sequences.",
+          },
+        ].map((item, i) => (
+          <div
+            key={i}
+            className="bg-white rounded-2xl shadow-md border border-gray-100 p-6 hover:shadow-lg transition-all"
+          >
+            <div className="text-3xl">{item.emoji}</div>
+            <h4 className="mt-3 font-semibold text-gray-900 text-lg">{item.title}</h4>
+            <p className="mt-2 text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+
+      {/* Offer Comparison Box */}
+      <div className="mt-16 bg-gradient-to-r from-orange-50 to-orange-100 border border-orange-200 rounded-2xl p-8 shadow-sm">
+        <h3 className="text-2xl font-extrabold text-gray-900 text-center mb-6">
+          Choose your partnership plan
+        </h3>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Early Partner Offer */}
+          <div className="bg-white rounded-2xl shadow-md border border-gray-100 p-6">
+            <div className="text-sm font-semibold text-orange-600 mb-2">Limited — First 5 Agencies</div>
+            <h4 className="text-2xl font-bold text-gray-900">$199 <span className="text-base text-gray-600 font-normal">one-time</span></h4>
+            <p className="mt-3 text-sm text-gray-600">
+              Includes full system setup, email sequences, domain warm-up, and first month of results. 
+              If satisfied, continue at <span className="font-semibold">$1000/month</span>.
+            </p>
+            <ul className="mt-4 space-y-2 text-sm text-gray-700">
+              <li>✅ Full setup included</li>
+              <li>✅ 600–800 leads & 3 inboxes</li>
+              <li>✅ 4–6 email sequence + funnel</li>
+              <li>✅ $149 worth free gifts if not satisfied</li>
+            </ul>
+          </div>
+
+          {/* Regular Plan */}
+          <div className="bg-white rounded-2xl shadow-md border border-gray-100 p-6">
+            <div className="text-sm font-semibold text-gray-500 mb-2">Standard Plan</div>
+            <h4 className="text-2xl font-bold text-gray-900">$700 <span className="text-base text-gray-600 font-normal">upfront</span> + $1000/mo</h4>
+            <p className="mt-3 text-sm text-gray-600">
+              Ideal for agencies ready to scale outreach instantly with proven automation and weekly reporting.
+            </p>
+            <ul className="mt-4 space-y-2 text-sm text-gray-700">
+              <li>✅ Full setup + launch</li>
+              <li>✅ 20+ qualified calls / month</li>
+              <li>✅ Dedicated performance tracking</li>
+              <li>✅ Priority support + scaling guidance</li>
+            </ul>
           </div>
         </div>
 
-        {/* Info Box */}
-        <div className="bg-white rounded-2xl shadow-md border border-gray-100 p-8 flex flex-col justify-center">
-          <h4 className="text-xl font-semibold text-gray-900 mb-3">
-            What we check
-          </h4>
-          <p className="text-base text-gray-600 leading-relaxed">
-            DKIM, SPF, and DMARC alignment. Warm-up sequences, inbox
-            engagement monitoring, and spam-trap avoidance — all to maintain
-            top-tier deliverability across campaigns.
-          </p>
+        <div className="text-center mt-8">
+          <a
+            href="https://calendly.com/your-link"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-block bg-gradient-to-r from-orange-500 to-pink-500 text-white px-6 py-3 rounded-full font-semibold shadow-md hover:scale-105 transition-all"
+          >
+            Apply for Early Partner Slot →
+          </a>
         </div>
       </div>
     </section>
   );
 }
+
 
