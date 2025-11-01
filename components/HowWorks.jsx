@@ -11,45 +11,45 @@ export default function HowWorks() {
       </h2>
 
       {/* Main Content */}
-      <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
-        {/* Diagram */}
-        <div className="col-span-2 bg-white rounded-2xl shadow-md p-8 md:p-10">
-          <div className="flex flex-col md:flex-row gap-10 items-start">
-            {/* Image */}
-            <div className="w-full md:w-1/2">
-              <div className="w-full h-56 md:h-64 bg-gray-50 rounded-xl flex items-center justify-center border border-gray-100 overflow-hidden">
-                <Image
-                  src="/automation-diagram.png"
-                  alt="Automation workflow diagram"
-                  width={420}
-                  height={240}
-                  className="object-contain opacity-90"
-                />
-              </div>
-            </div>
-
-            {/* Steps */}
-            <div className="w-full md:w-1/2 space-y-8">
-              <Step
-                number={1}
-                title="ICP Research"
-                desc="We map the right roles, company size, geography, and intent signals for perfect buyers."
-              />
-              <Step
-                number={2}
-                title="Automation Setup"
-                desc="We configure domains, warm inboxes, create multi-step sequences, and set up the scheduling flow."
-              />
-              <Step
-                number={3}
-                title="Optimize & Scale"
-                desc="We analyze replies, A/B test subject lines, and scale outreach volume while preserving deliverability."
+      <div className="mt-16 bg-white rounded-2xl shadow-md p-8 md:p-12">
+        <div className="flex flex-col md:flex-row items-start gap-10">
+          
+          {/* Image Area */}
+          <div className="w-full md:w-1/2">
+            <div className="w-full h-56 md:h-72 bg-gray-50 rounded-xl flex items-center justify-center border border-gray-100 overflow-hidden">
+              <Image
+                src="/automation-diagram.png"
+                alt="Automation workflow diagram"
+                width={450}
+                height={260}
+                className="object-contain opacity-90"
               />
             </div>
           </div>
+
+          {/* Steps Section */}
+          <div className="w-full md:w-1/2 space-y-10">
+            <Step
+              number={1}
+              title="ICP Research"
+              desc="We map the right roles, company size, geography, and intent signals for perfect buyers."
+            />
+            <Step
+              number={2}
+              title="Automation Setup"
+              desc="We configure domains, warm inboxes, create multi-step sequences, and set up the scheduling flow."
+            />
+            <Step
+              number={3}
+              title="Optimize & Scale"
+              desc="We analyze replies, A/B test subject lines, and scale outreach volume while preserving deliverability."
+            />
+          </div>
+
         </div>
       </div>
     </section>
   );
 }
+
 
