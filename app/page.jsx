@@ -1,50 +1,63 @@
 'use client';
-import Head from 'next/head';
+
+import Image from 'next/image';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Services from '../components/Services';
 import HowWorks from '../components/HowWorks';
 import Process from '../components/Process';
 import Founder from '../components/Founder';
-import Tools from '../components/Tools';
 import Deliverability from '../components/Deliverability';
 import Offer from '../components/Offer';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
-import Image from 'next/image';
+
+/**
+ * ✅ Note:
+ * - If you're using Next.js 13+ (App Router), don't use `next/head` in client files.
+ *   Instead, define page metadata in `export const metadata = { title, description }`
+ *   inside your `page.jsx`.
+ */
 
 export default function Home() {
   return (
-    <>
-      <Head>
-        <title>WallnutFlow — Qualified Calls for Agencies</title>
-        <meta name="description" content="We build automated cold email funnels that book 15+ qualified calls/month for agencies." />
-      </Head>
+    <div className="min-h-screen flex flex-col bg-gray-50">
+      {/* Header */}
+      <Header />
 
-      <div className="min-h-screen">
-        <Header />
-        <main>
-          <Hero />
-          <Services />
-          <HowWorks />
-          <Process />
-          <Founder />
+      {/* Main Content */}
+      <main className="flex-grow">
+        <Hero />
+        <Services />
+        <HowWorks />
+        <Process />
+        <Founder />
+
+        {/* Tools Image Section */}
+        <section className="max-w-6xl mx-auto px-6 md:px-16 mt-28">
+          <div className="bg-white rounded-2xl shadow-md p-6 md:p-10 flex justify-center">
             <Image
-             src="/tools.png"
-             alt="Preview diagram placeholder"
-             width={1000}
-             height={500}
-             className="rounded-lg object-contain opacity-100"
-             />
-          <Deliverability />
-          <Offer />
-          <Contact />
-        </main>
-        <Footer />
-      </div>
-    </>
+              src="/tools.png"
+              alt="Tools preview diagram"
+              width={1000}
+              height={500}
+              className="rounded-xl object-contain opacity-100"
+              priority
+            />
+          </div>
+        </section>
+
+        <Deliverability />
+        <Offer />
+        <Contact />
+      </main>
+
+      {/* Footer */}
+      <Footer />
+    </div>
   );
 }
+
 
 
 
