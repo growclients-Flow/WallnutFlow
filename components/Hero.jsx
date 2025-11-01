@@ -10,7 +10,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
-        className="inline-block bg-gray-100 text-gray-600 text-xs font-medium px-4 py-1 rounded-full mb-4"
+        className="inline-block bg-gray-100 border-2 border-b-indigo-800 text-indigo-800 text-xs font-medium px-4 py-1 rounded-full mb-4"
       >
         Fully Automated
       </motion.div>

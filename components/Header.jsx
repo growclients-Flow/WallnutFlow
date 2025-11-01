@@ -3,10 +3,10 @@ import React from 'react';
 
 export default function Header() {
   return (
-    <nav className="flex items-center justify-between bg-white px-6 md:px-20 py-5 shadow-sm">
+    <nav className="flex items-center justify-between px-6 md:px-20 py-5 shadow-sm">
       {/* Logo */}
-      <div className="text-2xl font-extrabold text-orange-600">
-        WallnutFlow.
+      <div className="text-3xl font-extrabold text-orange-600">
+        WallnutFlow <span className="text-2xl text-black">.</span>
       </div>
 
       {/* Navigation Links */}
