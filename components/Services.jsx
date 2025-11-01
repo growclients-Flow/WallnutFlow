@@ -11,7 +11,7 @@ const cards = [
 export default function Services(){
   return (
     <section id="services" className="max-w-5xl mx-auto px-6 md:px-16 mt-16">
-    <h3 className="font-bold text-lg">What we <span className="text-wallnut">serve</span> you</h3>
+    <h3 className="font-bold text-4xl">What we <span className="text-wallnut">serve</span> you</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="bg-white rounded-2xl shadow p-6">
           <div className="mt-6 grid grid-cols-1 gap-4">
