@@ -28,29 +28,40 @@ export default function Services() {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="text-center text-4xl md:text-4xl font-extrabold text-gray-900"
+        className="text-center text-4xl md:text-5xl font-extrabold text-gray-900"
       >
         What we <span className="text-orange-600">serve</span> you
       </motion.h2>
 
-      {/* Card Grid */}
-      <div className="bg-white rounded-2xl shadow p-6">
-      <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-8">
-        {services.map((item, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: i * 0.1 }}
-            className="bg-white rounded-2xl shadow-md border border-gray-100 p-8 hover:shadow-lg transition-shadow"
-          >
-            <h4 className="text-xl font-semibold text-gray-900">{item.title}</h4>
-            <p className="text-base text-gray-600 mt-3 leading-relaxed">{item.desc}</p>
-          </motion.div>
-        ))}
-      </div>
-    </div>
+      {/* Card Container */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+        className="bg-white rounded-2xl shadow-md mt-14 p-8 md:p-12"
+      >
+        {/* Card Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {services.map((item, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="bg-white rounded-2xl border border-gray-100 p-8 shadow-sm hover:shadow-lg transition-all"
+            >
+              <h4 className="text-2xl font-semibold text-gray-900">
+                {item.title}
+              </h4>
+              <p className="text-base text-gray-600 mt-3 leading-relaxed">
+                {item.desc}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
     </section>
   );
 }
+
 
