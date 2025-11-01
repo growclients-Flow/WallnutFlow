@@ -48,9 +48,6 @@ export default function HowWorks() {
             </div>
           </div>
         </div>
-
-        {/* Optional Side Card or Empty Column (for balance on large screens) */}
-        <div className="hidden md:block"></div>
       </div>
     </section>
   );
