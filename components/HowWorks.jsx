@@ -16,7 +16,7 @@ export default function HowWorks() {
           
           {/* Image Area */}
           <div className="w-full md:w-1/2">
-            <div className="w-full h-56 md:h-72 bg-gray-50 rounded-xl flex items-center justify-center border border-gray-100 overflow-hidden">
+            <div className="w-full h-56 md:h-72 rounded-xl flex items-center justify-center border overflow-hidden">
               <Image
                 src="/automation.jpg"
                 alt="Automation workflow diagram"
