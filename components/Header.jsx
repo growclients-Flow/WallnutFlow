@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import Link from 'next/link';
 
 export default function Header() {
   return (
@@ -12,7 +13,9 @@ export default function Header() {
       {/* Navigation Links */}
       <div className="hidden md:flex items-center gap-8 text-gray-800 font-medium">
         <a href="#services" className="hover:text-orange-600 transition">Services</a>
-        <a href="#docs" className="hover:text-orange-600 transition">Docs</a>
+         <Link href="/Docs" className="hover:text-orange-600 transition">
+          Docs
+        </Link>
         <a href="#how-it-works" className="hover:text-orange-600 transition">How it works</a>
         <a href="#contact" className="hover:text-orange-600 transition">Contact us</a>
       </div>
