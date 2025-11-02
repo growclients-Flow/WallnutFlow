@@ -17,8 +17,8 @@ export default function Docs() {
 
   return (
     <main className="min-h-screen bg-white flex flex-col md:flex-row">
-      {/* LEFT SIDEBAR */}
-      <aside className="w-full md:w-1/3 lg:w-1/4 border-r border-orange-200 px-8 md:px-12 py-12">
+      {/* LEFT SIDEBAR — sticky */}
+      <aside className="w-full md:w-1/3 lg:w-1/4 border-r border-orange-200 px-8 md:px-12 py-12 md:h-screen md:sticky md:top-0 bg-white">
         <h1 className="text-2xl font-extrabold text-orange-600 mb-10">
           WallnutFlow<span className="text-gray-900">.</span>
         </h1>
@@ -27,7 +27,7 @@ export default function Docs() {
           {sections.map((item, i) => (
             <motion.a
               key={i}
-              href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
+              href={`#${item.toLowerCase().replace(/\s+/g, '-').replace('&', 'and')}`}
               whileHover={{ x: 6 }}
               transition={{ duration: 0.2 }}
               className="block text-gray-700 font-medium text-base hover:text-orange-600 transition"
@@ -159,7 +159,7 @@ export default function Docs() {
                 </li>
 
                 <li>
-                  <strong>Research & ICP Build (Day 1–4):</strong> We build target lists (600–800 leads) using Apollo, LinkedIn signals and manual checks. We enrich and validate emails via NeverBounce or similar to keep bounce <1–2%.
+                  <strong>Research & ICP Build (Day 1–4):</strong> We build target lists (600–800 leads) using Apollo, LinkedIn signals and manual checks. We enrich and validate emails via NeverBounce or similar to keep bounce 1–2%.
                 </li>
 
                 <li>
@@ -316,4 +316,6 @@ export default function Docs() {
     </main>
   );
 }
+
+
 
