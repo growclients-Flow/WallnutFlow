@@ -55,7 +55,7 @@ export default function Hero() {
         className="mt-12 flex justify-center"
       >
             <Image
-              src="/previewimage.png"
+              src="/Group 17.png"
               alt="Preview diagram placeholder"
               width={1000}
               height={500}
