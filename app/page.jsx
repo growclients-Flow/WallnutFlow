@@ -65,7 +65,7 @@ export default function Home() {
       </a>
 
       <Link
-        href="/Offer"
+        href="/offer"
         className="bg-transparent border border-white text-white px-8 py-4 rounded-full font-medium hover:bg-white hover:text-gray-900 transition-all"
       >
         View $199 Early Offer

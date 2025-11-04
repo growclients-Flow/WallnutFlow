@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
-export default function Offer() {
+export default function offer() {
   return (
     <main className="min-h-screen bg-white text-gray-800">
       {/* HERO SECTION */}

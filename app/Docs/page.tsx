@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 
-export default function Docs() {
+export default function docs() {
   const sections = [
     'About us',
     'Pricing',
