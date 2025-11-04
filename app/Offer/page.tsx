@@ -84,7 +84,7 @@ export default function Offer() {
               Grab $199 Slot
             </Link>
             <Link
-              href="/offer-details"
+              href="/Offer"
               className="border border-orange-300 text-orange-600 px-6 py-3 rounded-lg font-semibold hover:bg-orange-50 transition text-center"
             >
               Learn More
