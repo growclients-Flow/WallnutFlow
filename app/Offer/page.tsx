@@ -72,7 +72,7 @@ export default function Offer() {
             <li>🔥 <strong>$199</strong> — One-time for first 30 days</li>
             <li>🧩 Full system setup + campaign launch included</li>
             <li>💼 Continue at <strong>$1000/mo</strong> if satisfied</li>
-            <li>🎁 Not satisfied? Get <strong>$149</strong> worth of free resources + keep all assets</li>
+            <li>🎁<strong>$149</strong> worth of free resources + keep all assets</li>
           </ul>
 
           <div className="flex flex-col sm:flex-row gap-3">
@@ -124,7 +124,7 @@ export default function Offer() {
       </section>
 
       {/* CTA SECTION */}
-      <section className="max-w-6xl mx-auto px-6 md:px-16 mt-24 mb-20 text-center">
+      <section className="max-w-6xl mx-auto px-6 md:px-16 mt-24 mb-30 text-center">
         <motion.div
           whileHover={{ scale: 1.02 }}
           className="bg-orange-600 text-white rounded-3xl py-14 px-10 shadow-lg"
