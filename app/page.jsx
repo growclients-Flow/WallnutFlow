@@ -56,7 +56,7 @@ export default function Home() {
     {/* CTA Buttons */}
     <div className="flex flex-col sm:flex-row justify-center gap-4">
       <a
-        href="https://calendly.com/your-link"
+        href="https://calendly.com/growclients-wallnut/30min"
         target="_blank"
         rel="noreferrer"
         className="bg-white text-gray-900 font-semibold px-8 py-4 rounded-full shadow-md hover:scale-105 transition-all"
@@ -64,14 +64,12 @@ export default function Home() {
         🚀 Book Your Free Strategy Call
       </a>
 
-      <a
-        href="https://wallnutflow.com/offer-details"
-        target="_blank"
-        rel="noreferrer"
+      <Link
+        href="/Offer"
         className="bg-transparent border border-white text-white px-8 py-4 rounded-full font-medium hover:bg-white hover:text-gray-900 transition-all"
       >
         View $199 Early Offer
-      </a>
+      </Link>
     </div>
   </div>
 </section>

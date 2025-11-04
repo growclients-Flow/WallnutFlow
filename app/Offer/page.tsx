@@ -46,7 +46,7 @@ export default function Offer() {
           </ul>
 
           <Link
-            href="https://calendly.com/wallnutflow"
+            href="https://calendly.com/growclients-wallnut/30min"
             target="_blank"
             className="inline-block bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition"
           >
@@ -77,7 +77,7 @@ export default function Offer() {
 
           <div className="flex flex-col sm:flex-row gap-3">
             <Link
-              href="https://calendly.com/wallnutflow"
+              href="https://calendly.com/growclients-wallnut/30min"
               target="_blank"
               className="bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition text-center"
             >
@@ -137,7 +137,7 @@ export default function Offer() {
             you start, the sooner your calendar fills.
           </p>
           <Link
-            href="https://calendly.com/wallnutflow"
+            href="https://calendly.com/growclients-wallnut/30min"
             target="_blank"
             className="bg-white text-orange-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-orange-50 transition"
           >

@@ -22,7 +22,7 @@ export default function Header() {
 
       {/* Button */}
       <a
-        href="https://calendly.com/wallnutflow"
+        href="https://calendly.com/growclients-wallnut/30min"
         target="_blank"
         rel="noreferrer"
         className="bg-orange-600 text-white px-5 py-2 rounded-md text-sm font-semibold hover:bg-orange-700 transition"

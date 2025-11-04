@@ -83,7 +83,7 @@ export default function Deliverables() {
             </ul>
 
             <a
-              href="https://calendly.com/your-early-partner-link"
+              href="https://calendly.com/growclients-wallnut/30min"
               target="_blank"
               rel="noreferrer"
               className="mt-6 inline-block text-center bg-gradient-to-r from-orange-500 to-pink-500 text-white px-5 py-3 rounded-4xl font-semibold shadow-md hover:scale-105 transition-all"
@@ -107,7 +107,7 @@ export default function Deliverables() {
             </ul>
 
             <a
-              href="https://calendly.com/your-regular-plan-link"
+              href="https://calendly.com/growclients-wallnut/30min"
               target="_blank"
               rel="noreferrer"
               className="mt-6 inline-block text-center bg-gradient-to-r from-gray-800 to-gray-900 text-white px-5 py-3 rounded-4xl font-semibold shadow-md hover:scale-105 transition-all"
@@ -122,7 +122,7 @@ export default function Deliverables() {
 <div className="mt-6 flex flex-col md:flex-row items-center justify-between bg-white border border-gray-100 rounded-2xl p-6 shadow-[0_4px_30px_rgba(0,0,0,0.1)]">
   <div>
     <h4 className="text-lg font-semibold text-gray-900">
-      Is you didn’t satisfied with the result in this 30 days?? Don’t worry.
+      Also you can get welcome gifts but only for first 5 agencies, Hurry up!!, 2 slots are already booked
     </h4>
     <p className="text-gray-600 text-sm mt-1">
       You can get <span className="font-semibold">$149 worth free resources</span> here

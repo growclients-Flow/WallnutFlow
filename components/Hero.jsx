@@ -38,7 +38,7 @@ export default function Hero() {
         className="mt-6 flex justify-center"
       >
         <a
-          href="https://calendly.com/wallnutflow"
+          href="https://calendly.com/growclients-wallnut/30min"
           target="_blank"
           rel="noreferrer"
           className="inline-flex items-center bg-orange-600 text-white px-6 py-3 rounded-full font-semibold text-sm shadow-md hover:scale-105 hover:bg-orange-700 transition-all"
