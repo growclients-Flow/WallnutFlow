@@ -14,9 +14,9 @@ export const metadata: Metadata = {
   title: "WallnutFlow",
   description: "Automated Client Acquisition System for Agencies 🚀",
   icons: {
-    icon: "/logo.png",          // favicon shown in browser tab
-    shortcut: "/logo.png",      // ensures compatibility
-    apple: "/logo.png",         // iPhone/iPad bookmark icon
+    icon: "/icon.png",          // favicon shown in browser tab
+    shortcut: "/icon.png",      // ensures compatibility
+    apple: "/icon.png",         // iPhone/iPad bookmark icon
   },
   openGraph: {
     title: "WallnutFlow",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: "WallnutFlow",
     images: [
       {
-        url: "/logo.png",       // shown when shared on social media
+        url: "/icon.png",       // shown when shared on social media
         width: 800,
         height: 800,
         alt: "WallnutFlow Logo",
