@@ -128,7 +128,7 @@ export default function Deliverables() {
       You can get <span className="font-semibold">$149 worth free resources</span> here
       <span className="text-gray-400"> -------➤ </span>
       <Link
-        href="/offer"
+        href="/offers"
         className="text-purple-600 font-medium hover:underline"
       >
         click here
@@ -137,7 +137,7 @@ export default function Deliverables() {
   </div>
 
   <Link
-    href="/offer"
+    href="/offers"
     className="mt-4 md:mt-0 inline-block bg-gray-900 text-white text-sm font-medium px-6 py-3 rounded-xl shadow-md hover:scale-105 transition-all"
   >
     About this offer
