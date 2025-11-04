@@ -8,16 +8,7 @@ import HowWorks from '../components/HowWorks';
 import Process from '../components/Process';
 import Founder from '../components/Founder';
 import Deliverability from '../components/Deliverability';
-import Offer from '../components/Offer';
-import Contact from '../components/Contact';
-import Footer from '../components/Footer';
 
-/**
- * ✅ Note:
- * - If you're using Next.js 13+ (App Router), don't use `next/head` in client files.
- *   Instead, define page metadata in `export const metadata = { title, description }`
- *   inside your `page.jsx`.
- */
 
 export default function Home() {
   return (
