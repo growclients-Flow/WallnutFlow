@@ -1,5 +1,5 @@
 'use client';
-
+import Link from 'next/link';
 export default function Deliverables() {
   return (
     <section className="max-w-6xl mx-auto px-6 md:px-16 mt-28">
@@ -127,25 +127,21 @@ export default function Deliverables() {
     <p className="text-gray-600 text-sm mt-1">
       You can get <span className="font-semibold">$149 worth free resources</span> here
       <span className="text-gray-400"> -------➤ </span>
-      <a
-        href="https://wallnutflow.com/free-resources"
-        target="_blank"
-        rel="noreferrer"
+      <Link
+        href="/Offer"
         className="text-purple-600 font-medium hover:underline"
       >
         click here
-      </a>
+      </Link>
     </p>
   </div>
 
-  <a
-    href="https://wallnutflow.com/about-offer"
-    target="_blank"
-    rel="noreferrer"
+  <Link
+    href="/Offer"
     className="mt-4 md:mt-0 inline-block bg-gray-900 text-white text-sm font-medium px-6 py-3 rounded-xl shadow-md hover:scale-105 transition-all"
   >
     About this offer
-  </a>
+  </Link>
 </div>
 
     </section>

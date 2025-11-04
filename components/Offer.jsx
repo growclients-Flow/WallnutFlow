@@ -1,39 +1,151 @@
 'use client';
-export default function Offer(){
+
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+
+export default function Offer() {
   return (
-    <section id="offer" className="max-w-5xl mx-auto px-6 md:px-16 mt-16 mb-16">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        <div>
-          <h2 className="text-2xl md:text-3xl font-extrabold">Early Partner Program</h2>
-          <p className="mt-3 text-gray-600">First 5 agencies get a full Proof-of-Concept month for <span className="font-semibold">$199</span>. Includes full setup, running, and weekly reports. Continue at <span className="font-semibold">$1000/mo</span> after month one.</p>
+    <main className="min-h-screen bg-white text-gray-800">
+      {/* HERO SECTION */}
+      <section className="max-w-6xl mx-auto px-6 md:px-16 py-20 text-center">
+        <motion.h1
+          className="text-4xl md:text-5xl font-extrabold text-gray-900"
+          initial={{ y: 30, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6 }}
+        >
+          Our <span className="text-orange-600">Offers & Pricing</span>
+        </motion.h1>
+        <p className="mt-6 text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          Transparent pricing. No surprises. Every plan is built to generate
+          predictable, qualified sales calls for your agency — hands-free.
+        </p>
+      </section>
 
-          <ul className="mt-6 space-y-3 text-gray-700">
-            <li>✅ 3 inboxes & warmed domains</li>
-            <li>✅ 600–800 verified ICP leads setup</li>
-            <li>✅ 4–5 email sequence & booking flow</li>
-            <li>✅ Weekly call + transparent reporting</li>
+      {/* MAIN PRICING SECTION */}
+      <section className="max-w-6xl mx-auto px-6 md:px-16 mt-10 grid grid-cols-1 md:grid-cols-2 gap-10">
+        {/* Regular Offer */}
+        <motion.div
+          whileHover={{ y: -5, scale: 1.02 }}
+          transition={{ duration: 0.3 }}
+          className="border border-gray-100 rounded-3xl p-10 shadow-sm hover:shadow-md bg-white"
+        >
+          <h3 className="text-2xl font-bold text-gray-900 mb-2">
+            Regular Plan
+          </h3>
+          <p className="text-gray-500 mb-6">
+            Best for agencies ready to scale their client acquisition
+            predictably.
+          </p>
+
+          <ul className="space-y-3 text-gray-700 mb-8">
+            <li>💰 <strong>$700</strong> — One-time upfront setup fee</li>
+            <li>📈 <strong>$1000/month</strong> — Retainer after setup</li>
+            <li>⚙️ Includes: full cold email + funnel + automation system</li>
+            <li>🧠 15–20 qualified calls/month guaranteed*</li>
           </ul>
 
-          <div className="mt-6 flex gap-3">
-            <a href="https://calendly.com/wallnutflow" className="bg-gradient-to-r from-wallnut to-orange-500 text-white px-5 py-3 rounded-full font-semibold">Apply for partner slot</a>
-            <a href="#contact" className="px-5 py-3 rounded-full border border-gray-200">Contact us</a>
+          <Link
+            href="https://calendly.com/wallnutflow"
+            target="_blank"
+            className="inline-block bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition"
+          >
+            Book a Call
+          </Link>
+        </motion.div>
+
+        {/* Early Offer */}
+        <motion.div
+          whileHover={{ y: -5, scale: 1.02 }}
+          transition={{ duration: 0.3 }}
+          className="border border-orange-200 rounded-3xl p-10 shadow-md bg-gradient-to-b from-orange-50 to-white"
+        >
+          <h3 className="text-2xl font-bold text-orange-600 mb-2">
+            Limited Offer (First 5 Agencies)
+          </h3>
+          <p className="text-gray-600 mb-6">
+            Get early access to our system at a one-time test-drive price. Build
+            trust, proof, and momentum before scaling.
+          </p>
+
+          <ul className="space-y-3 text-gray-700 mb-8">
+            <li>🔥 <strong>$199</strong> — One-time for first 30 days</li>
+            <li>🧩 Full system setup + campaign launch included</li>
+            <li>💼 Continue at <strong>$1000/mo</strong> if satisfied</li>
+            <li>🎁 Not satisfied? Get <strong>$149</strong> worth of free resources + keep all assets</li>
+          </ul>
+
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Link
+              href="https://calendly.com/wallnutflow"
+              target="_blank"
+              className="bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition text-center"
+            >
+              Grab $199 Slot
+            </Link>
+            <Link
+              href="/offer-details"
+              className="border border-orange-300 text-orange-600 px-6 py-3 rounded-lg font-semibold hover:bg-orange-50 transition text-center"
+            >
+              Learn More
+            </Link>
           </div>
+        </motion.div>
+      </section>
+
+      {/* WHAT YOU GET */}
+      <section className="max-w-5xl mx-auto px-6 md:px-16 mt-20 text-center">
+        <h2 className="text-3xl font-bold text-gray-900 mb-4">
+          What’s Included in Every Plan
+        </h2>
+        <p className="text-gray-600 max-w-2xl mx-auto mb-12">
+          Whether you choose the $199 trial or full system, you get everything
+          needed to attract, nurture, and close qualified clients — automatically.
+        </p>
+
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 text-left">
+          {[
+            '3–5 verified inboxes with warming & deliverability setup',
+            'Custom cold email sequences (5–6 stages)',
+            'High-quality 600–800 ICP leads sourced from Apollo',
+            'Landing page + calendar funnel setup',
+            'Weekly performance reports & analytics',
+            '1-on-1 strategy + optimization meetings',
+          ].map((item, i) => (
+            <motion.div
+              key={i}
+              whileHover={{ scale: 1.03 }}
+              className="bg-white border border-gray-100 shadow-sm rounded-xl p-6"
+            >
+              <p className="text-gray-700">{item}</p>
+            </motion.div>
+          ))}
         </div>
+      </section>
 
-        <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
-          <div className="text-sm text-gray-500">Proof-of-Concept</div>
-          <div className="mt-3 text-3xl font-bold">$199</div>
-          <div className="mt-2 text-sm text-gray-600">One-time (first 5 agencies)</div>
-
-          <ul className="mt-6 text-gray-700 space-y-2">
-            <li>✅ Setup & Launch</li>
-            <li>✅ First month delivery</li>
-            <li>✅ Weekly reporting</li>
-          </ul>
-
-          <a href="https://calendly.com/wallnutflow" className="mt-6 block text-center bg-wallnut text-white rounded-full py-3 font-semibold">Get early access</a>
-        </div>
-      </div>
-    </section>
+      {/* CTA SECTION */}
+      <section className="max-w-6xl mx-auto px-6 md:px-16 mt-24 mb-20 text-center">
+        <motion.div
+          whileHover={{ scale: 1.02 }}
+          className="bg-orange-600 text-white rounded-3xl py-14 px-10 shadow-lg"
+        >
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
+            Ready to See Qualified Calls Flow In?
+          </h2>
+          <p className="text-white/90 mb-8 text-lg">
+            Join the first 5 agencies or start your full setup today. The faster
+            you start, the sooner your calendar fills.
+          </p>
+          <Link
+            href="https://calendly.com/wallnutflow"
+            target="_blank"
+            className="bg-white text-orange-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-orange-50 transition"
+          >
+            Book a Free Discovery Call
+          </Link>
+        </motion.div>
+      </section>
+    </main>
   );
 }
+
