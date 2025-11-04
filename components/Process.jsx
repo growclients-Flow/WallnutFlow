@@ -1,8 +1,8 @@
 'use client';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-
-export default function Process() {
+import Link from 'next/link';
+;export default function Process() {
   const steps = [
     {
       icon: '/process-1.png',
