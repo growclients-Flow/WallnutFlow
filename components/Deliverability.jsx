@@ -122,7 +122,8 @@ export default function Deliverables() {
 <div className="mt-6 flex flex-col md:flex-row items-center justify-between bg-white border border-gray-100 rounded-2xl p-6 shadow-[0_4px_30px_rgba(0,0,0,0.1)]">
   <div>
     <h4 className="text-lg font-semibold text-gray-900">
-      Also you can get welcome gifts but only for first 5 agencies, Hurry up!!, 2 slots are already booked
+      Also you can get welcome gifts but only for first 5 agencies, Hurry up!! 
+      2 slots are already booked
     </h4>
     <p className="text-gray-600 text-sm mt-1">
       You can get <span className="font-semibold">$149 worth free resources</span> here

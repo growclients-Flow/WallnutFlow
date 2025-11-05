@@ -40,13 +40,7 @@ export default function Founder() {
               rel="noreferrer"
               className="inline-block bg-orange-600 text-white px-6 py-3 rounded-full font-semibold shadow-md hover:bg-orange-700 transition-all"
             >
-              Book a strategy call
-            </a>
-            <a
-              href="#contact"
-              className="text-sm font-medium text-gray-700 hover:text-orange-600 transition"
-            >
-              Send a message →
+              Follow on LinkedIn
             </a>
           </div>
         </div>

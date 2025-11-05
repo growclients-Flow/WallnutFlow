@@ -70,7 +70,7 @@ import Link from 'next/link';
       {/* CTA after process */}
       <div className="mt-16 text-center">
         <Link
-          href="/Offer"
+          href="/offers"
           className="inline-block bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-full font-semibold shadow-md hover:scale-105 transition-all"
         >
           Apply for $199 Early Partner Slot →
